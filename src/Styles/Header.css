@@ -1,0 +1,21 @@
+.nav-bar {
+    display: flex;
+    margin-left: 60%;
+}
+
+.nav-item {
+    font-family: 'Spartan';
+    font-size: 24px;
+    padding: 12px 20px;
+}
+
+.title-logo {
+    float: right;
+    margin-right: 6%;
+    margin-top: 1%;
+    width: 36vw;
+}
+
+.empower-text {
+    display: block;
+}
