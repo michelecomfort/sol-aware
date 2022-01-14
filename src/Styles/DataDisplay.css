@@ -1,0 +1,77 @@
+* {
+    font-family: 'Spartan';
+    color: #3F3E3E;
+}
+.data-section {
+    background-color: #FFE696;
+    height: 56vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.data-top {
+    display: flex;
+    justify-content: space-around;
+}
+
+.location-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.daily-uv {
+    display: flex;
+}
+
+.uv-max {
+    display: flex;
+    flex-direction: column;
+}
+
+.max-heading {
+
+}
+
+.max-number {
+    padding: 20px;
+    font-size: 32px;
+    margin: 0;
+    text-align: center;
+    border-radius: 4px;
+    background: #FFE696;
+    box-shadow: inset 5px 5px 10px #baa86e,
+                inset -5px -5px 10px #ffffbf;
+}
+
+.safe-exposure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+select,
+input {
+    text-align: center;
+    border: none;
+    margin: 0 20px;
+    width: 100px;
+    height: 28px;
+    border-radius: 4px;
+    background: #FFE696;
+    box-shadow: inset 5px 5px 10px #baa86e,
+                inset -5px -5px 10px #ffffbf;
+}
+
+.exposure-inputs {
+    display: flex;
+    margin: 0 16px;
+}
+
+.data-bottom {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 20vh; */
+}

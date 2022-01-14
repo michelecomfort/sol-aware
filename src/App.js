@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Header from './Components/Header'
 import ZipInput from './Components/ZipInput'
+import DataDisplay from './Components/DataDisplay';
 import './App.css';
 // import AppContext from './AppContext'
 
@@ -37,6 +38,7 @@ class App extends Component {
           <main className="nav">
             <Header />
             <ZipInput setCityState={this.setCityState} setUvData={this.setUvData} setZipCode={this.setZipCode}/>
+            <DataDisplay />
           </main>
         
       )
