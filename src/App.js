@@ -1,25 +1,46 @@
-import logo from './logo.svg';
+import React, { Component } from 'react'
+import Header from './Components/Header'
+import ZipInput from './Components/ZipInput'
 import './App.css';
+// import AppContext from './AppContext'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      zipcode: '',
+      cityState: '',
+      uvData: []
+    }
+  }
+
+  setZipCode = (zip) => {
+    this.setState({ zipcode: zip })
+  }
+  setCityState = (data) => {
+    this.setState({ cityState: data.city + ', ' + data.state })
+    
+  }
+
+  setUvData = (data) => {
+    this.setState({ uvData: data })
+    console.log(this.state)
+  }
+
+
+  
+  render() {
+      return (
+        
+          <main className="nav">
+            <Header />
+            <ZipInput setCityState={this.setCityState} setUvData={this.setUvData} setZipCode={this.setZipCode}/>
+          </main>
+        
+      )
+    }
 }
 
 export default App;
