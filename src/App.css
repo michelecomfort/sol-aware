@@ -2,9 +2,5 @@
   overflow-y: hidden;
 }
 .nav {
-  background-image: url('./assets/landing-background.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  overflow-y: hidden;
+
 }
