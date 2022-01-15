@@ -18,7 +18,7 @@ const HourlyUVChart = ({ uvData }) => {
     }
     console.log(barColors)
     const chartData = {
-        labels: ['8', '9', '10','11', '12', '1', '2', '3', '4', '5', '6'],
+        labels: ['8am', '9am', '10am','11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm'],
         datasets: [
         {
             label: 'Hour',
@@ -44,7 +44,7 @@ const HourlyUVChart = ({ uvData }) => {
                             text: "Hourly UV Index"
                             },
                             legend: {
-                            display: true,
+                            display: false,
                             position: "bottom"
                         }
                         }
