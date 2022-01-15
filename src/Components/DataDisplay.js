@@ -13,40 +13,49 @@ class DataDisplay extends Component  {
             cityState: '',
             uvData: [],
             date: '',
-            uvHigh: ''
+            uvHigh: '',
+            exposureMinutes: ''
         }
     }
 
     componentDidMount = () => {
         apiCalls.getUvData(this.props.zipcode)
             .then(data => {
-
                 const month = data[0]['DATE_TIME'].split(' ')[0].split('/')[0]
                 const day = data[0]['DATE_TIME'].split(' ')[0].split('/')[1]
-                
                 this.setState({uvData: data, date: month + ' ' + day})
-                
                 this.findHighUv()
             })
 
-
         apiCalls.getCityState(this.props.zipcode)
-            .then(data => {
-                
-                this.setState({cityState: data.city + ', ' + data.state,})
-            })
-            
+            .then(data => this.setState({cityState: data.city + ', ' + data.state})
+            )   
     }
 
     findHighUv = () => {
-        const high = this.state.uvData.reduce((acc, day) => {
-            acc.push(day.UV_VALUE)
-            return acc
-        }, []).sort((a, b) => {
-            return b - a
-        })
-        console.log(high[0])
-        return high[0]
+        const high = this.state.uvData.sort((a, b) => b.UV_VALUE - a.UV_VALUE
+        ).map(obj => obj.UV_VALUE)
+        this.setState({ uvHigh: high[0]})
+    }
+
+    grabExposureMinutes = (skinType) => {
+        let type;
+        switch(skinType) {
+
+            case 'Type I':
+            type = 2.5
+            case 'Type II':
+            type = 3
+            case 'Type III':
+            type = 4
+            case 'Type IV':
+            type = 5
+            case 'Type V':
+            type = 8
+            case 'Type VI':
+            type = 15
+        }
+        this.setState({ exposureMinutes: `Your maximum safe exposure time is ${(200 * type) / (3 * this.state.uvHigh)} minutes.` })
     }
 
 
@@ -62,7 +71,7 @@ class DataDisplay extends Component  {
                     <div className='daily-uv'>
                         <div className='uv-max'>
                             <h3 className='max-heading'>UV Max</h3>
-                            <h4 className='max-number'>{this.findHighUv()}</h4>
+                            <h4 className='max-number'>{this.state.uvHigh}</h4>
     
                         </div>
                     <p className='high-low-key'>Low</p>
@@ -70,33 +79,17 @@ class DataDisplay extends Component  {
                     <div className='safe-exposure'>
                         <h3>Safe Exposure for Skin Type</h3>
                         <div className='exposure-inputs'>
-                            <select >
-                                <option>skin type</option>
-                                <option>Type I</option>
-                                <option>Type II</option>
-                                <option>Type III</option>
-                                <option>Type IV</option>
-                                <option>Type V</option>
-                                <option>Type VI</option>
-                            </select>
-    
-                            <select >
-                                <option>uv index</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>8</option>
-                                <option>9</option>
-                                <option>10</option>
-                                <option>11</option>
-                                <option>12</option>
-                            </select>
+                            <input onChange={(e) => this.grabExposureMinutes(e.target.value)} list='skin-type' placeholder='skin type'/>
+                                <datalist id='skin-type'>
+                                    <option value='Type I'>Type I</option>
+                                    <option value='Type II'>Type II</option>
+                                    <option value='Type III'>Type III</option>
+                                    <option value='Type IV'>Type IV</option>
+                                    <option value='Type V'>Type V</option>
+                                    <option value='Type VI'>Type VI</option>
+                                </datalist>
                         </div>
-                        <h4>Your maximum safe exposure time is ---- minutes.</h4>
+                        <h4>{this.state.exposureMinutes}</h4>
                     </div>
                 </div>
     
