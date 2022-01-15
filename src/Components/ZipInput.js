@@ -1,37 +1,25 @@
 import React, { Component } from 'react'
 import '../Styles/ZipInput.css'
-import '../apiCalls.js'
 import apiCalls from '../apiCalls.js'
+import { Link } from 'react-router-dom'
 
 class ZipInput extends Component {
     constructor() {
         super()
         this.state = {
-            zipcode: '',
-            cityState: '',
-            uvData: []
+            zipcode: ''
         }
     }
 
     handleChange = (e) => {
-        this.setState({ zipcode: e.target.value})
+        // this.setState({ zipcode: e.target.value})
+        this.props.setZipCode(e.target.value)
+        
     }
 
     submitZipcode = (e) => {
         e.preventDefault()
         const zip = this.state.zipcode
-        apiCalls.getUvData(zip)
-            .then(data => {
-                
-                this.props.setUvData(data)
-            })
-        apiCalls.getCityState(zip)
-            .then(data => {
-                this.props.setCityState(data)
-                
-            })
-            
-            this.props.setZipCode(zip)
     }
 
 
@@ -46,7 +34,7 @@ class ZipInput extends Component {
                             <input className='zipcode-input' placeholder='Zip Code' onChange={(e) => this.handleChange(e)}/>
                         </label>
                         <div className='button-container'>
-                            <button type='button'className='go-button' onSubmit={(e) => this.submitZipcode(e)} >Go</button>
+                            <Link to='/datadisplay' className='go-button'>Go</Link>
                         </div>
                     </div>
                 </div>

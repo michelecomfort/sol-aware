@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../Styles/Header.css'
 
 const Header = () => {
@@ -7,7 +8,7 @@ const Header = () => {
             <img src={require('../assets/sol-aware-heading.png')}className='title-logo'/>
             <nav>
                 <ul className='nav-bar'>
-                    <li className='nav-item home'>home</li>
+                    <Link to='/' className='nav-item home'>home</Link>
                     <li className='nav-item'>uv guide</li>
                     <li className='nav-item'>skin types</li>
                 </ul>

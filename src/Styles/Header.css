@@ -16,6 +16,7 @@
     font-size: 20px;
     padding: 18px 12px;
     width: 120px;
+    list-style-type: none;
 }
 
 .nav-item.home {

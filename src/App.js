@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Header from './Components/Header'
 import ZipInput from './Components/ZipInput'
 import DataDisplay from './Components/DataDisplay';
+import { Routes, Route } from 'react-router-dom'
 import './App.css';
 // import AppContext from './AppContext'
 
@@ -12,8 +13,7 @@ class App extends Component {
     super()
     this.state = {
       zipcode: '',
-      cityState: '',
-      uvData: []
+      
     }
   }
 
@@ -27,7 +27,7 @@ class App extends Component {
 
   setUvData = (data) => {
     this.setState({ uvData: data })
-    console.log(this.state)
+    
   }
 
 
@@ -36,9 +36,19 @@ class App extends Component {
       return (
         
           <main className="nav">
-            <Header />
-            <ZipInput setCityState={this.setCityState} setUvData={this.setUvData} setZipCode={this.setZipCode}/>
-            <DataDisplay />
+              <Header />
+            <Routes>
+            
+              <Route path='/' element={<ZipInput setCityState={this.setCityState} setUvData={this.setUvData} setZipCode={this.setZipCode}/>}>
+
+                </Route>
+          
+              <Route path='/datadisplay' element={<DataDisplay zipcode={this.state.zipcode} uvData={this.state.uvData}/>}>
+
+              </Route>
+            
+            
+            </Routes>
           </main>
         
       )
