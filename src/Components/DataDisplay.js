@@ -38,6 +38,20 @@ class DataDisplay extends Component  {
         this.setState({ uvHigh: high[0]})
     }
 
+    getUvStatus = () => {
+        if(this.state.uvHigh >= 2) {
+            return 'Low'
+        } else if (5 > this.state.uvHigh >= 3) {
+            return 'Moderate'
+        } else if (7 >= this.state.uvHigh >= 6) {
+            return 'High'
+        } else if (10 >= this.state.uvHigh >= 8) {
+            return 'Very High'
+        } else {
+            return 'Extreme'
+        }
+    }
+
     grabExposureMinutes = (skinType) => {
         let type;
         switch(skinType) {
@@ -63,8 +77,6 @@ class DataDisplay extends Component  {
         this.setState({ exposureMinutes: `Your maximum safe exposure time is ${Math.floor((200 * type) / (3 * this.state.uvHigh))} minutes.` })
     }
 
-
-
     render() {
         return (
             <section className='data-section'>
@@ -77,12 +89,11 @@ class DataDisplay extends Component  {
                         <div className='uv-max'>
                             <h3 className='max-heading'>UV Max</h3>
                             <h4 className='max-number'>{this.state.uvHigh}</h4>
-    
                         </div>
-                    <p className='high-low-key'>Low</p>
+                    <p className='high-low-key'>{this.getUvStatus()}</p>
                     </div>
                     <div className='safe-exposure'>
-                        <h3>Safe Exposure for Skin Type</h3>
+                        <h3 className='safe-exposure-heading'>Safe Exposure for Skin Type</h3>
                         <div className='exposure-inputs'>
                             <input onChange={(e) => this.grabExposureMinutes(e.target.value)} list='skin-type' placeholder='skin type'/>
                                 <datalist id='skin-type'>
@@ -94,7 +105,7 @@ class DataDisplay extends Component  {
                                     <option value='Type VI'>Type VI</option>
                                 </datalist>
                         </div>
-                        <h4>{this.state.exposureMinutes}</h4>
+                        <h4 className='exposure-minutes'>{this.state.exposureMinutes}</h4>
                     </div>
                 </div>
     
