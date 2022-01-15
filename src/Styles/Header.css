@@ -17,6 +17,7 @@
     padding: 18px 12px;
     width: 120px;
     list-style-type: none;
+    text-decoration: none;
 }
 
 .nav-item.home {
