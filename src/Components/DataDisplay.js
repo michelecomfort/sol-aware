@@ -41,21 +41,26 @@ class DataDisplay extends Component  {
     grabExposureMinutes = (skinType) => {
         let type;
         switch(skinType) {
-
             case 'Type I':
-            type = 2.5
+                type = 2.5
+                break;
             case 'Type II':
-            type = 3
+                type = 3
+                break;
             case 'Type III':
-            type = 4
+                type = 4
+                break;
             case 'Type IV':
-            type = 5
+                type = 5
+                break;
             case 'Type V':
-            type = 8
+                type = 8
+                break;
             case 'Type VI':
-            type = 15
+                type = 15
+                break;
         }
-        this.setState({ exposureMinutes: `Your maximum safe exposure time is ${(200 * type) / (3 * this.state.uvHigh)} minutes.` })
+        this.setState({ exposureMinutes: `Your maximum safe exposure time is ${Math.floor((200 * type) / (3 * this.state.uvHigh))} minutes.` })
     }
 
 
@@ -65,8 +70,8 @@ class DataDisplay extends Component  {
             <section className='data-section'>
                 <div className='data-top'>
                     <div className='location-date'>
-                        <h3>{this.state.cityState}</h3>
-                        <h4>{this.state.date}</h4>
+                        <h3 className='location'>{this.state.cityState}</h3>
+                        <h4 className='date'>{this.state.date}</h4>
                     </div>
                     <div className='daily-uv'>
                         <div className='uv-max'>
