@@ -4,7 +4,7 @@
 }
 .data-section {
     background-color: #FFE696;
-    height: 56vh;
+    height: 66vh;
     display: flex;
     flex-direction: column;
 }
@@ -12,7 +12,7 @@
 .data-top {
     display: flex;
     /* justify-content: space-around; */
-    margin-bottom: 10px;
+    margin-bottom: 4px;
     height: 600px;
 }
 
@@ -73,12 +73,13 @@
 .safe-exposure-heading {
     font-size: 30px;
     margin-top: 6px;
+    margin-bottom: 10px;
 }
 
 input {
     text-align: center;
     border: none;
-    margin: 0 20px;
+    margin: 10px 20px;
     width: 180px;
     height: 32px;
     border-radius: 4px;
@@ -93,9 +94,10 @@ input {
 }
 
 .exposure-minutes {
-    font-size: 22px;
+    font-size: 18px;
     width: 70%;
     text-align: center;
+    margin: 0 auto;
 }
 
 

@@ -33,21 +33,24 @@ class DataDisplay extends Component  {
     }
 
     findHighUv = () => {
-        const high = this.state.uvData.sort((a, b) => b.UV_VALUE - a.UV_VALUE
-        ).map(obj => obj.UV_VALUE)
+        const high = this.state.uvData.map(obj => {
+            return obj['UV_VALUE']
+        }).sort((a, b) => {
+            return b - a
+        })
         this.setState({ uvHigh: high[0]})
     }
 
     getUvStatus = () => {
-        if(this.state.uvHigh >= 2) {
+        if(this.state.uvHigh <= 2) {
             return 'Low'
-        } else if (5 > this.state.uvHigh >= 3) {
+        } else if (2 < this.state.uvHigh <= 5 ) {
             return 'Moderate'
-        } else if (7 >= this.state.uvHigh >= 6) {
+        } else if (5 < this.state.uvHigh <= 7) {
             return 'High'
-        } else if (10 >= this.state.uvHigh >= 8) {
+        } else if (7 < this.state.uvHigh <= 10) {
             return 'Very High'
-        } else {
+        } else if (this.state.uvHigh > 10) {
             return 'Extreme'
         }
     }
@@ -109,7 +112,7 @@ class DataDisplay extends Component  {
                     </div>
                 </div>
     
-                <HourlyUVChart />
+                <HourlyUVChart uvData={this.state.uvData}/>
     
                 <div className='data-bottom'>
                     <h1>icons go here</h1>
