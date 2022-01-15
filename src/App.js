@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Header from './Components/Header'
 import ZipInput from './Components/ZipInput'
 import DataDisplay from './Components/DataDisplay';
+import UvGuide from './Components/UvGuide';
+import SkinTypes from './Components/SkinTypes'
 import { Routes, Route } from 'react-router-dom'
 import './App.css';
 // import AppContext from './AppContext'
@@ -44,6 +46,12 @@ class App extends Component {
                 </Route>
           
               <Route path='/datadisplay' element={<DataDisplay zipcode={this.state.zipcode} uvData={this.state.uvData}/>}>
+
+              </Route>
+              <Route path='/uvGuide' element={<UvGuide/>}>
+
+              </Route>
+              <Route path='/skinTypes' element={<SkinTypes />}>
 
               </Route>
             
