@@ -82,7 +82,7 @@ class DataDisplay extends Component  {
 
     render() {
         return (
-            <section className='data-section'>
+            <section className='data-section' data-cy='data-section'>
                 <div className='data-top'>
                     <div className='location-date'>
                         <h3 className='location'>{this.state.cityState}</h3>
