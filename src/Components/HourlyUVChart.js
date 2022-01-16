@@ -31,7 +31,7 @@ const HourlyUVChart = ({ uvData }) => {
     };
     console.log(barColors)
         return (
-            <div className='hourly-chart-container'>
+            <div className='hourly-chart-container' data-cy='hourly-chart-container'>
                 <div className='chart'>
                     <Bar
                         data={chartData}

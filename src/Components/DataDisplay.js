@@ -85,20 +85,20 @@ class DataDisplay extends Component  {
             <section className='data-section' data-cy='data-section'>
                 <div className='data-top'>
                     <div className='location-date'>
-                        <h3 className='location'>{this.state.cityState}</h3>
-                        <h4 className='date'>{this.state.date}</h4>
+                        <h3 className='location' data-cy='city-state'>{this.state.cityState}</h3>
+                        <h4 className='date' data-cy='city-state'>{this.state.date}</h4>
                     </div>
                     <div className='daily-uv'>
                         <div className='uv-max'>
-                            <h3 className='max-heading'>UV Max</h3>
-                            <h4 className='max-number'>{this.state.uvHigh}</h4>
+                            <h3 className='max-heading' data-cy='max-heading'>UV Max</h3>
+                            <h4 className='max-number' data-cy='max-number'>{this.state.uvHigh}</h4>
                         </div>
                     <p className='high-low-key'>{this.getUvStatus()}</p>
                     </div>
-                    <div className='safe-exposure'>
-                        <h3 className='safe-exposure-heading'>Safe Exposure for Skin Type</h3>
+                    <div className='safe-exposure' data-cy='safe-exposure'>
+                        <h3 className='safe-exposure-heading' data-cy='safe-exposure-heading'>Safe Exposure for Skin Type</h3>
                         <div className='exposure-inputs'>
-                            <input onChange={(e) => this.grabExposureMinutes(e.target.value)} list='skin-type' placeholder='skin type'/>
+                            <input onChange={(e) => this.grabExposureMinutes(e.target.value)} list='skin-type' placeholder='skin type' data-cy='skin-type-input'/>
                                 <datalist id='skin-type'>
                                     <option value='Type I'>Type I</option>
                                     <option value='Type II'>Type II</option>
@@ -108,7 +108,7 @@ class DataDisplay extends Component  {
                                     <option value='Type VI'>Type VI</option>
                                 </datalist>
                         </div>
-                        <h4 className='exposure-minutes'>{this.state.exposureMinutes}</h4>
+                        <h4 className='exposure-minutes' data-cy='exposure-minutes'>{this.state.exposureMinutes}</h4>
                     </div>
                 </div>
     
