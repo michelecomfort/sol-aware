@@ -16,7 +16,6 @@ const HourlyUVChart = ({ uvData }) => {
         if (uvValues[i] > 7 && uvValues[i <= 10]){barColors.push('#FA7272')}
         if (uvValues[i] > 10){barColors.push('#CDA4F5')}
     }
-    console.log(barColors)
     const chartData = {
         labels: ['8am', '9am', '10am','11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm'],
         datasets: [
@@ -29,7 +28,6 @@ const HourlyUVChart = ({ uvData }) => {
         }
         ]
     };
-    console.log(barColors)
         return (
             <div className='hourly-chart-container' data-cy='hourly-chart-container'>
                 <div className='chart'>
