@@ -212,7 +212,7 @@ describe('Sol Aware Data Display page', () => {
             .contains('Your maximum safe exposure time is 76 minutes.')
     })
 
-    it.only('should display a chart with current hourly values of uv indices', () => {
+    it('should display a chart with current hourly values of uv indices', () => {
         cy.get('[data-cy=hourly-chart-container]')
             .should('exist')
             .should('have.class', 'hourly-chart-container')
