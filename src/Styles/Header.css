@@ -24,6 +24,10 @@
     padding-right: 0;
 }
 
+.nav-item:hover {
+    opacity: .5;
+}
+
 .title-logo {
     height: 90px;
     width: 360px;

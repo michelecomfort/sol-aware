@@ -65,6 +65,11 @@
     background: #FFE696;
     box-shadow:  5px 5px 10px #665c3c,
                 -5px -5px 10px #fffff0;
+                transition: transform .2s;
+}
+
+.go-button:hover {
+    transform: scale(.9);
 }
 
 .small-grid {
@@ -85,6 +90,7 @@
     text-align: center;
 }
 
-img {
+.home-image {
+    border-radius: 4px;
     width: 280px;
 }

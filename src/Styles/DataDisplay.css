@@ -11,9 +11,7 @@
 
 .data-top {
     display: flex;
-    /* justify-content: space-around; */
     margin-bottom: 4px;
-    height: 600px;
     border-bottom: 1px solid #EDC95A;
 }
 
@@ -42,6 +40,7 @@
 .uv-max {
     display: flex;
     flex-direction: column;
+    margin-bottom: 6px;
 }
 
 .max-heading {
@@ -96,16 +95,34 @@ input {
 
 .exposure-minutes {
     font-size: 18px;
-    width: 70%;
+    width: 100%;
     text-align: center;
     margin: 0 auto;
 }
 
 
-.data-bottom {
+.bottom-section {
     background-color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     /* height: 20vh; */
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    margin: 0 auto;
+    justify-items: center;
+    align-items: center;
+}
+
+.icon {
+   
+}
+
+.icon {
+    width: 100px;
 }

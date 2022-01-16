@@ -114,9 +114,25 @@ class DataDisplay extends Component  {
     
                 <HourlyUVChart uvData={this.state.uvData}/>
     
-                <div className='data-bottom'>
-                    <h1>icons go here</h1>
-                </div>
+                <aside className='bottom-section' data-cy='icon-grid'>
+                    <h1>Keep yourself protected during sun exposure</h1>
+                    <div className='icon-grid'>
+
+                        <div  data-cy='icon'>
+                            <img src={require('../assets/hat.png')} className='icon'/>
+                        </div>
+
+                        <div data-cy='icon'>
+                            <img src={require('../assets/sunscreen.png')} className='icon'/>
+                        </div>
+
+                        <div data-cy='icon'>
+                            <img src={require('../assets/umbrella.png')} className='icon'/>
+                        </div>
+
+                    </div>
+                </aside>
+
             </section>
             
         )
