@@ -48,7 +48,7 @@ class ZipInput extends Component {
                         <img src={require('../assets/sunscreen-woman.jpeg')} className='home-image'/>
                     </div>
                     <div className='small-info-section' data-cy='small-info-section'>
-                        <p className='small-text'>Protect yourself and loved ones for melanoma and skin disease</p>
+                        <p className='small-text'>Protect yourself and loved ones from melanoma and skin disease</p>
                         <img src={require('../assets/generational.jpeg')} className='home-image'/>
                     </div>
                 </aside>
