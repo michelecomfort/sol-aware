@@ -4,134 +4,97 @@ describe('Sol Aware Data Display page', () => {
         cy.get('[data-cy=zip-input]').type('96740')
 
         cy.get('[data-cy=go-button]').click()
-            .wait(2000)
 
-        cy.intercept('GET', `https://s3.amazonaws.com/dmap-api-cache-ncc-production/20220115/hourly/zip/96740.json`, {
+        cy.intercept('GET', `https://s3.amazonaws.com/dmap-api-cache-ncc-production/20220116/hourly/zip/96740.json`, {
             "uv-data": [
                 {
-                    "ORDER": 1,
-                    "ZIP": "96740",
-                    "DATE_TIME": "JAN/16/2022 01 AM",
-                    "UV_VALUE": 0
-                    },
-                    {
-                    "ORDER": 2,
-                    "ZIP": "96740",
-                    "DATE_TIME": "JAN/16/2022 02 AM",
-                    "UV_VALUE": 0
-                    },
-                    {
-                    "ORDER": 3,
-                    "ZIP": "96740",
-                    "DATE_TIME": "JAN/16/2022 03 AM",
-                    "UV_VALUE": 0
-                    },
-                    {
                     "ORDER": 4,
                     "ZIP": "96740",
-                    "DATE_TIME": "JAN/16/2022 04 AM",
+                    "DATE_TIME": "JAN/17/2022 04 AM",
                     "UV_VALUE": 0
                     },
                     {
                     "ORDER": 5,
                     "ZIP": "96740",
-                    "DATE_TIME": "JAN/16/2022 05 AM",
+                    "DATE_TIME": "JAN/17/2022 05 AM",
                     "UV_VALUE": 0
                     },
                     {
                     "ORDER": 6,
                     "ZIP": "96740",
-                    "DATE_TIME": "JAN/16/2022 06 AM",
+                    "DATE_TIME": "JAN/17/2022 06 AM",
                     "UV_VALUE": 0
                     },
                     {
                     "ORDER": 7,
                     "ZIP": "96740",
-                    "DATE_TIME": "JAN/16/2022 07 AM",
+                    "DATE_TIME": "JAN/17/2022 07 AM",
                     "UV_VALUE": 0
                     },
                     {
                     "ORDER": 8,
                     "ZIP": "96740",
-                    "DATE_TIME": "JAN/16/2022 08 AM",
+                    "DATE_TIME": "JAN/17/2022 08 AM",
                     "UV_VALUE": 1
                     },
                     {
                     "ORDER": 9,
                     "ZIP": "96740",
-                    "DATE_TIME": "JAN/16/2022 09 AM",
+                    "DATE_TIME": "JAN/17/2022 09 AM",
                     "UV_VALUE": 2
                     },
                     {
                     "ORDER": 10,
                     "ZIP": "96740",
-                    "DATE_TIME": "JAN/16/2022 10 AM",
+                    "DATE_TIME": "JAN/17/2022 10 AM",
                     "UV_VALUE": 4
                     },
                     {
                     "ORDER": 11,
                     "ZIP": "96740",
-                    "DATE_TIME": "JAN/16/2022 11 AM",
+                    "DATE_TIME": "JAN/17/2022 11 AM",
                     "UV_VALUE": 6
                     },
                     {
                     "ORDER": 12,
                     "ZIP": "96740",
-                    "DATE_TIME": "JAN/16/2022 12 PM",
+                    "DATE_TIME": "JAN/17/2022 12 PM",
                     "UV_VALUE": 7
                     },
                     {
                     "ORDER": 13,
                     "ZIP": "96740",
-                    "DATE_TIME": "JAN/16/2022 01 PM",
+                    "DATE_TIME": "JAN/17/2022 01 PM",
                     "UV_VALUE": 7
                     },
                     {
                     "ORDER": 14,
                     "ZIP": "96740",
-                    "DATE_TIME": "JAN/15/2022 02 PM",
+                    "DATE_TIME": "JAN/16/2022 02 PM",
                     "UV_VALUE": 6
                     },
                     {
                     "ORDER": 15,
                     "ZIP": "96740",
-                    "DATE_TIME": "JAN/15/2022 03 PM",
+                    "DATE_TIME": "JAN/16/2022 03 PM",
                     "UV_VALUE": 3
                     },
                     {
                     "ORDER": 16,
                     "ZIP": "96740",
-                    "DATE_TIME": "JAN/15/2022 04 PM",
+                    "DATE_TIME": "JAN/16/2022 04 PM",
                     "UV_VALUE": 1
                     },
                     {
                     "ORDER": 17,
                     "ZIP": "96740",
-                    "DATE_TIME": "JAN/15/2022 05 PM",
+                    "DATE_TIME": "JAN/16/2022 05 PM",
                     "UV_VALUE": 0
                     },
                     {
                     "ORDER": 18,
                     "ZIP": "96740",
-                    "DATE_TIME": "JAN/15/2022 06 PM",
-                    "UV_VALUE": 0
-                    },
-                    {
-                    "ORDER": 19,
-                    "ZIP": "96740",
-                    "DATE_TIME": "JAN/15/2022 07 PM",
-                    "UV_VALUE": 0
-                    },
-                    {
-                    "ORDER": 20,
-                    "ZIP": "96740",
-                    "DATE_TIME": "JAN/15/2022 08 PM",
-                    "UV_VALUE": 0
-                    },
-                    {
-                    "ORDER": 21,
-                    "ZIP": "96740",
-                    "DATE_TIME": "JAN/15/2022 09 PM",
+                    "DATE_TIME": "JAN/16/2022 06 PM",
                     "UV_VALUE": 0
                     }]
         })
@@ -153,9 +116,8 @@ describe('Sol Aware Data Display page', () => {
             .should('exist')
             .contains('KAILUA KONA, HI')
 
-        cy.get('[data-cy=city-state]')
+        cy.get('[data-cy=date]')
             .should('exist')
-            .contains('JAN 15')
             
         cy.get('[data-cy=max-heading]')
             .should('exist')
@@ -204,10 +166,11 @@ describe('Sol Aware Data Display page', () => {
             .should('have.value', 'Type VI')
     })
 
-    it('should allow user to enter their skin type and display the recommended max time of direct sun exposure for that day', () => {
+    it.only('should allow user to enter their skin type and display the recommended max time of direct sun exposure for that day', () => {
         cy.get('[data-cy=skin-type-input]')
+            .wait(2000)
             .type('Type V')
-
+            
         cy.get('[data-cy=exposure-minutes]')
             .contains('Your maximum safe exposure time is 76 minutes.')
     })

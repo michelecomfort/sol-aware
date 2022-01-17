@@ -91,6 +91,7 @@ const DataDisplay = ({ zipcode })  => {
         setExposureMinutes(`Your maximum safe exposure time is ${Math.floor((200 * type) / (3 * uvHigh))} minutes.`)
     }
 
+    console.log(uvData)
     return (
         <main>
             { error ? <p className='error-message'>Sorry, there's been an error: '{error}' Please return to the home page and try again!</p> : 
@@ -98,7 +99,7 @@ const DataDisplay = ({ zipcode })  => {
                 <div className='data-top'>
                     <div className='location-date'>
                         <h3 className='location' data-cy='city-state'>{cityState}</h3>
-                        <h4 className='date' data-cy='city-state'>{date}</h4>
+                        <h4 className='date' data-cy='date'>{date}</h4>
                     </div>
                     <div className='daily-uv'>
                         <div className='uv-max'>
