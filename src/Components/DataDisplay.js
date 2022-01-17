@@ -130,13 +130,13 @@ const DataDisplay = ({ zipcode })  => {
                     <h1 className='protection-message'>Keep yourself protected during sun exposure</h1>
                     <div className='icon-grid'>
                         <div  data-cy='icon'>
-                            <img src={require('../assets/hat.png')} className='icon'/>
+                            <img src={require('../assets/hat.png')} alt='Baseball hat icon'className='icon'/>
                         </div>
                         <div data-cy='icon'>
-                            <img src={require('../assets/sunscreen.png')} className='icon'/>
+                            <img src={require('../assets/sunscreen.png')} alt='Sunscreen bottle icon' className='icon'/>
                         </div>
                         <div data-cy='icon'>
-                            <img src={require('../assets/umbrella.png')} className='icon'/>
+                            <img src={require('../assets/umbrella.png')} alt='Beach umbrella icon' className='icon'/>
                         </div>
                     </div>
                 </aside>

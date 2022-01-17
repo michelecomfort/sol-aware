@@ -27,15 +27,15 @@ const ZipInput = ({ addZipcode}) => {
             <aside className='small-grid' data-cy='small-grid'>
                 <div className='small-info-section' data-cy='small-info-section'>
                     <p className='small-text'>The health of our skin starts with decisions we make everyday</p>
-                    <img src={require('../assets/sunflower-woman.jpeg')} className='home-image'/>
+                    <img src={require('../assets/sunflower-woman.jpeg')} alt='Woman in a field of sunflowers'className='home-image'/>
                 </div>
                 <div className='small-info-section' data-cy='small-info-section'>
                     <p className='small-text'>Know the facts about SPF protection and its correct usage</p>
-                    <img src={require('../assets/sunscreen-woman.jpeg')} className='home-image'/>
+                    <img src={require('../assets/sunscreen-woman.jpeg')} alt='Woman applying sunscreento her nose' className='home-image'/>
                 </div>
                 <div className='small-info-section' data-cy='small-info-section'>
                     <p className='small-text'>Protect yourself and loved ones from melanoma and skin disease</p>
-                    <img src={require('../assets/generational.jpeg')} className='home-image'/>
+                    <img src={require('../assets/generational.jpeg')} alt='Smiling family of three generations' className='home-image'/>
                 </div>
             </aside>
         </form>

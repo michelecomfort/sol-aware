@@ -5,7 +5,7 @@ import '../Styles/Header.css'
 const Header = () => {
     return (
         <header className='header' data-cy='header'>
-            <img src={require('../assets/sol-aware-heading.png')}className='title-logo' data-cy='logo'/>
+            <img src={require('../assets/sol-aware-heading.png')} alt='Sol Aware Logo heading' className='title-logo' data-cy='logo'/>
             <nav>
                 <ul className='nav-bar' data-cy='nav-bar'>
                     <Link to='/' className='nav-item home' data-cy='nav-link'>home</Link>
