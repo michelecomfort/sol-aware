@@ -5,26 +5,26 @@
 .uv-guide {
     background-color: #FFE696;
     display: flex;
-    justify-content: space-between;
     height: 100vh;
+    justify-content: space-between;
 }
 
 .uv-guide-image {
-    width: 46vw;
     height: 36vw;
     margin: 60px 30px 0 40px;
+    width: 46vw;
 }
 
 .factors-section {
     display: flex;
     flex-direction: column;
-    margin: 20px auto;
     font-size: 26px;
+    margin: 20px auto;
 }
 
 .factors-heading {
-    width: 76%;
     text-align: center;
+    width: 76%;
 }
 
 @media screen and (max-width: 800px) {
@@ -50,12 +50,12 @@
 
     .uv-guide-image {
         height: 80%;
-        width: 90%;
         margin: 30px auto;
+        width: 90%;
     }
 
     .factors-heading {
-        margin: 14px auto 6px;
         font-size: 26px;
+        margin: 14px auto 6px;
     }
 }
