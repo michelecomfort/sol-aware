@@ -1,0 +1,18 @@
+.hourly-chart-container {
+    margin: 0 auto;
+    width: 760px;
+
+   display: flex; 
+    justify-content: center;
+    align-items: center; 
+    border-radius: 4px;
+    background: #FFE696;
+    box-shadow: inset 5px 5px 10px #baa86e,
+                inset -5px -5px 10px #ffffbf;
+                margin-bottom: 14px;
+}
+
+.chart {
+    width: 72%;
+    padding: 8px 0;
+}

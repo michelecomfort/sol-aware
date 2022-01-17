@@ -1,0 +1,90 @@
+/* .zipcode-form {
+    ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.input-section {
+    width: 100vw;
+    height: 42vh;
+    background-color: #FFE696;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slogan {
+    color: #3F3E3E;
+    font-family: 'Spartan';
+    font-size: 36px;
+    width: 30%;
+    text-align: center;
+}
+
+.input-button {
+    display: flex;
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+    justify-items: center;
+}
+
+.zipcode-input {
+    border: none;
+    cursor: pointer;
+    font-family: 'Spartan';
+    font-size: 24px;
+    height: 40px;
+    text-align: center;
+    width: 160px; 
+    margin-right: 20px;
+    border-radius: 4px;
+    background: #FFE696;
+    box-shadow: inset 5px 5px 10px #baa86e,
+                inset -5px -5px 10px #ffffbf;
+}
+
+.go-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7B7777;
+    height: 56px;
+    width: 56px;
+    font-family: 'Spartan';
+    font-size: 24px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin: 22px;
+    text-decoration: none;
+    border-radius: 4px;
+    background: #FFE696;
+    box-shadow:  5px 5px 10px #665c3c,
+                -5px -5px 10px #fffff0;
+}
+
+.small-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 60px;
+}
+
+.small-info-section {
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.small-text {
+    width: 200px;
+    text-align: center;
+}
+
+img {
+    width: 280px;
+}

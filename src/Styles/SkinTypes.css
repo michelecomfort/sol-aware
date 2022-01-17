@@ -1,0 +1,31 @@
+* {
+    font-family: 'Spartan';
+    color: #3F3E3E;
+}
+
+.skin-type-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #FFE696;
+    height: 84vh;
+}
+
+.skin-type-images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 16px;
+}
+
+.skin-type-image {
+    border-radius: 4px;
+    width: 48vw;
+    height: 30vw;
+}
+
+.smiling-woman-image {
+    border-radius: 4px;
+    height: 26vw;
+    width: 40vw;
+}
