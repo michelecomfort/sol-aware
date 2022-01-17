@@ -5,7 +5,7 @@ const UvGuide = () => {
 
     return (
         <section className='uv-guide' data-cy='uv-guide'>
-            <img src={require('../assets/uv-index-guide.png')} className='uv-guide-image'/>
+            <img src={require('../assets/uv-index-guide.png')} alt='Chart providing users with information on UV index levels' className='uv-guide-image'/>
             <div className='factors-section'>
                 <h2 className='factors-heading' data-cy='contributing-factors-heading'>Factors contributing to UV grades</h2>
                 <ul data-cy='factors-list' id='factors-list'>

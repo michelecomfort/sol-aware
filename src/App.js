@@ -10,17 +10,20 @@ import './App.css';
 const App = () => {
 
   const [zipcode, setZipcode ] = useState('')
+  const [savedZipcodes, saveZipcode] = useState([])
 
   const addZipcode = (zip) => setZipcode(zip)
+
+  const addToSavedZips = (zipcode) => saveZipcode([...savedZipcodes, zipcode])
     
   return (
       <main className="nav">
         <Header />
         <Routes>
-          <Route path='/' element={<ZipInput addZipcode={addZipcode}/>}>
+          <Route path='/' element={<ZipInput addZipcode={addZipcode} savedZipcodes={savedZipcodes}/>}>
           </Route>
       
-          <Route path='/datadisplay' element={<DataDisplay zipcode={zipcode} />}>
+          <Route path='/datadisplay' element={<DataDisplay zipcode={zipcode} addToSavedZips={addToSavedZips}/>}>
           </Route>
 
           <Route path='/uvGuide' element={<UvGuide/>}>
