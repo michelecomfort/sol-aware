@@ -95,7 +95,6 @@ class DataDisplay extends Component  {
     }
 
     render() {
-        console.log(this.state)
         return (
             <main>
                 { this.state.error ? <p className='error-message'>Sorry, there's been an error: '{this.state.error}' Please return to the home page and try again!</p> : 
