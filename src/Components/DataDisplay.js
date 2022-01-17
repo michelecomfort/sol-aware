@@ -4,6 +4,7 @@ import '../Styles/DataDisplay.css'
 import apiCalls from '../apiCalls.js'
 
 import React, { useState, useEffect, useLayoutEffect } from 'react'
+import propTypes from 'prop-types'
 const date = new Date()
 const month = date.getUTCMonth() + 1
 const day = date.getUTCDate()
@@ -147,3 +148,7 @@ const DataDisplay = ({ zipcode })  => {
 }
 
 export default DataDisplay
+
+DataDisplay.propTypes = {
+    zipcode: propTypes.string.isRequired
+}
