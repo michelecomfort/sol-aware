@@ -5,7 +5,12 @@ describe('Sol Aware Data Display page', () => {
         
         
         cy.get('[data-cy=go-button]').click()
-        cy.intercept('GET', `https://s3.amazonaws.com/dmap-api-cache-ncc-production/${getTodayDate()}/hourly/zip/96740.json`, {stateCode: 200, fixture: 'uvData.json'})
+        cy.fixture('./uvData.json').then((uvData) => {
+        cy.intercept('GET', `https://s3.amazonaws.com/dmap-api-cache-ncc-production/20220117/hourly/zip/96740.json`, {
+            statusCode: 200, 
+            body: uvData})
+        })
+        
             
         
     })
@@ -75,7 +80,7 @@ describe('Sol Aware Data Display page', () => {
             .should('have.value', 'Type VI')
     })
 
-    it.only('should allow user to enter their skin type and display the recommended max time of direct sun exposure for that day', () => {
+    it('should allow user to enter their skin type and display the recommended max time of direct sun exposure for that day', () => {
         cy.get('[data-cy=skin-type-input]')
             .wait(2000)
             .type('Type V')
