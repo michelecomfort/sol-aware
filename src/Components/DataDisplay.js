@@ -98,7 +98,7 @@ class DataDisplay extends Component  {
         console.log(this.state)
         return (
             <main>
-                { this.state.error ? <p>Sorry, there's been an error: '{this.state.error}'</p> : 
+                { this.state.error ? <p className='error-message'>Sorry, there's been an error: '{this.state.error}' Please return to the home page and try again!</p> : 
                 <section className='data-section' data-cy='data-section'>
                     <div className='data-top'>
                         <div className='location-date'>

@@ -2,6 +2,15 @@
     font-family: 'Spartan';
     color: #3F3E3E;
 }
+
+.error-message {
+    color: red;
+    font-size: 40px;
+    margin: 100px auto;
+
+    text-align: center;
+    width: 82%;
+}
 .data-section {
     background-color: #FFE696;
     height: 66vh;
