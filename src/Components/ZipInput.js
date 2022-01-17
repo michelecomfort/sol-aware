@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import '../Styles/ZipInput.css'
-import apiCalls from '../apiCalls.js'
 import { Link } from 'react-router-dom'
+import propTypes from 'prop-types'
 
-const ZipInput = (props) => {
+const ZipInput = ({ addZipcode}) => {
 
     const [zip, setZip] = useState('')
     
     const sendZip = (e) => {
         setZip(e)
-        props.addZipcode(e) 
+        addZipcode(e) 
     }
 
     return (
@@ -44,3 +44,7 @@ const ZipInput = (props) => {
 
 
 export default ZipInput
+
+ZipInput.propTypes = {
+    addZipcode: propTypes.func.isRequired
+}
