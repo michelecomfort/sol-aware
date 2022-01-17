@@ -9,7 +9,7 @@ const date = new Date()
 const month = date.getUTCMonth() + 1
 const day = date.getUTCDate()
 
-const DataDisplay = ({ zipcode })  => {
+const DataDisplay = ({ zipcode, addToSavedZips })  => {
     const [cityState, setCityState] = useState('')
     const [uvData, setUvData] = useState([])
     const [date, setDate] = useState('')
@@ -91,7 +91,11 @@ const DataDisplay = ({ zipcode })  => {
         setExposureMinutes(`Your maximum safe exposure time is ${Math.floor((200 * type) / (3 * uvHigh))} minutes.`)
     }
 
-    console.log(uvData)
+    const saveThisZip = () => {
+        addToSavedZips(zipcode)
+    }
+
+    
     return (
         <main>
             { error ? <p className='error-message'>Sorry, there's been an error: '{error}' Please return to the home page and try again!</p> : 
@@ -100,6 +104,7 @@ const DataDisplay = ({ zipcode })  => {
                     <div className='location-date'>
                         <h3 className='location' data-cy='city-state'>{cityState}</h3>
                         <h4 className='date' data-cy='date'>{date}</h4>
+                        <button onClick={() => saveThisZip()}>Save location</button>
                     </div>
                     <div className='daily-uv'>
                         <div className='uv-max'>

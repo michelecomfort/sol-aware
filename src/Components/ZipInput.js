@@ -3,7 +3,7 @@ import '../Styles/ZipInput.css'
 import { Link } from 'react-router-dom'
 import propTypes from 'prop-types'
 
-const ZipInput = ({ addZipcode}) => {
+const ZipInput = ({ addZipcode, savedZipcodes }) => {
 
     const [zip, setZip] = useState('')
     
@@ -11,6 +11,12 @@ const ZipInput = ({ addZipcode}) => {
         setZip(e)
         addZipcode(e) 
     }
+
+    const makeZipButtons = savedZipcodes.map(zip => {
+        return (
+            <Link to='/datadisplay'><button onClick={() => sendZip(zip)}>{zip}</button></Link>
+        )
+    })
 
     return (
         <form className='zipcode-form' data-cy='zipcode-form'>
@@ -21,6 +27,7 @@ const ZipInput = ({ addZipcode}) => {
                         <input className='zipcode-input' placeholder='Zip Code' data-cy='zip-input' onChange={(e) => sendZip(e.target.value)} />
                     </label>
                     <Link to='/datadisplay' className='go-button' data-cy='go-button'>Go</Link>
+                    {makeZipButtons}
                 </div>
             </div>
             
