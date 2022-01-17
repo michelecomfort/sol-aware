@@ -38,7 +38,7 @@ class App extends Component {
       return (
         
           <main className="nav">
-              <Header />
+            <Header />
             <Routes>
             
               <Route path='/' element={<ZipInput setCityState={this.setCityState} setUvData={this.setUvData} setZipCode={this.setZipCode}/>}>
