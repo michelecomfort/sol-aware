@@ -28,7 +28,6 @@
     font-size: 24px;
     margin: 0 120px 10px 160px;
     display: flex;
-
 }
 
 .daily-uv {
@@ -120,9 +119,89 @@ input {
 }
 
 .icon {
-   
+    width: 100px;
 }
 
-.icon {
-    width: 100px;
+@media screen and (max-width: 800px) {
+    .data-section {
+        /* background-color: #FFE696; */
+        /* height: 100vh; */
+        /* display: flex; */
+        /* flex-direction: column; */
+    }
+
+    .data-top {
+        margin-bottom: 20px;
+        border-bottom: none;
+    }
+
+    .location,
+    .date {
+        font-size: 24px;
+        margin: 0 68px 0 60px;
+        /* display: flex; */
+        text-align: center;
+    }
+    .location {
+        margin-bottom: 18px;
+    }
+
+    .safe-exposure {
+
+        margin: 20px 10px 0 14px ;
+    }
+
+    .safe-exposure-heading {
+        font-size: 26px;
+        text-align: center;
+    }
+    
+    .bottom-section {
+        height: 30vh;
+    }
+    
+    .protection-message {
+        margin-top: 0px;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .data-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .data-section {
+        /* height: 0; */
+    }
+
+    .high-low-key {
+        margin-right: 0;
+    }
+
+    .location,
+    .date {
+        margin-top: 10px;
+    }
+    
+    .location{
+        margin-bottom: 10px;
+
+    }
+
+    .uv-max {
+        margin: 0 0 0 70px;
+    }
+
+    .safe-exposure-heading {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .bottom-section {
+        margin-top: 30px;
+        height: 30vh;
+        text-align: center;
+    }
 }

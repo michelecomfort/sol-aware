@@ -26,3 +26,36 @@
     width: 76%;
     text-align: center;
 }
+
+@media screen and (max-width: 800px) {
+    .uv-guide {
+        flex-direction: column;
+    }
+
+    .uv-guide-image {
+        height: 90%;
+        width: 90%;
+    }
+
+    .factors-heading {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .uv-guide {
+        flex-direction: column;
+        height: 46vh;
+    }
+
+    .uv-guide-image {
+        height: 80%;
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    .factors-heading {
+        margin: 14px auto 6px;
+        font-size: 26px;
+    }
+}

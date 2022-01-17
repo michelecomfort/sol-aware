@@ -1,6 +1,5 @@
 .header{
     height: 16vh;
-    /* border: 2px solid green; */
     display: flex;
     justify-content: space-between;
 }
@@ -36,3 +35,109 @@
 }
 
 
+@media screen and (max-width: 960px) {
+    .nav-bar {
+        margin-right: 40px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .nav-bar {
+        margin-right: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-item {
+        font-family: 'Spartan';
+        font-size: 18px;
+        padding: 8px 6px;
+        list-style-type: none;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .header{
+        height: 19vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title-logo {
+        height: 70px;
+        width: 240px;
+        margin: auto;
+    }
+
+    .nav-bar {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+    }
+
+    .nav-item {
+        font-family: 'Spartan';
+        font-size: 18px;
+        padding: 6px 6px;
+        list-style-type: none;
+        text-decoration: none;
+    }
+    .small-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    } 
+    .small-text {
+        width: 400x;
+        text-align: center;
+    }
+    
+    .home-image {
+        border-radius: 4px;
+        width: 420px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header{
+        height: 19vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .title-logo {
+        height: 70px;
+        width: 240px;
+        margin: auto;
+    }
+
+    .nav-bar {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+    }
+
+    .nav-item {
+        font-family: 'Spartan';
+        font-size: 18px;
+        padding: 6px 6px;
+        list-style-type: none;
+        text-decoration: none;
+    }
+    .small-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    } 
+    .small-text {
+        width: 400x;
+        text-align: center;
+    }
+    
+    .home-image {
+        border-radius: 4px;
+        width: 420px;
+    }
+}

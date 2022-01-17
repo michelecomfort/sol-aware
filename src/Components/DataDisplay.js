@@ -132,7 +132,7 @@ class DataDisplay extends Component  {
                     <HourlyUVChart uvData={this.state.uvData}/>
         
                     <aside className='bottom-section' data-cy='icon-grid'>
-                        <h1>Keep yourself protected during sun exposure</h1>
+                        <h1 className='protection-message'>Keep yourself protected during sun exposure</h1>
                         <div className='icon-grid'>
 
                             <div  data-cy='icon'>
