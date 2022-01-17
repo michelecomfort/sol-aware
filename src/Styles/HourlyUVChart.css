@@ -1,7 +1,28 @@
-.hourly-chart {
-    height: 36vh;
-    border: 2px solid blue;
-    display: flex;
+.hourly-chart-container {
+    margin: 0 auto;
+    width: 760px;
+    display: flex; 
     justify-content: center;
-    align-items: center;
+    align-items: center; 
+    border-radius: 4px;
+    background: #FFE696;
+    box-shadow: inset 5px 5px 10px #baa86e,
+                inset -5px -5px 10px #ffffbf;
+                margin-bottom: 14px;
+}
+
+.chart {
+    width: 72%;
+    padding: 8px 0;
+}
+
+@media screen and (max-width: 800px) {
+    .hourly-chart-container {
+        width: 100%
+    }
+
+    .chart {
+        width: 90%;
+        padding: 8px 0;
+    }
 }

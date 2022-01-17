@@ -29,3 +29,52 @@
     height: 26vw;
     width: 40vw;
 }
+
+@media screen and (max-width: 800px) {
+    .skin-type-section {
+      
+        height: 68vh;
+    }
+
+    .determining-skin-type-heading{
+        font-size: 46px;
+    }
+
+    .skin-type-images {
+        flex-direction: column;
+    }
+
+    .skin-type-image {
+        margin-bottom: 54px;
+        width: 88vw;
+        height: 66vw;
+    }
+    
+    .smiling-woman-image {
+        width: 88vw;
+        height: 66vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .skin-type-section {
+        height: 58vh;
+    }
+
+    .determining-skin-type-heading{
+        font-size: 28px;
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .skin-type-image {
+        margin-bottom: 42px;
+        width: 92vw;
+        height: 70vw;
+    }
+    
+    .smiling-woman-image {
+        width: 92vw;
+        height: 70vw;
+    }
+}
