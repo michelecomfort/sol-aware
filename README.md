@@ -3,7 +3,7 @@ Mod3 2108 FE
 
 Deployed project: [here]()
 
-<img width="1301" alt="" src="">
+<img width="1301" alt="Sol Aware landing page" src="https://user-images.githubusercontent.com/86859884/149706030-2f557530-f90c-48e5-939c-23a1232fb2be.png">
 
 ## Table of Contents
   - [Install + Setup](#set-up)
