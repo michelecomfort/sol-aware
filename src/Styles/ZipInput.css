@@ -20,11 +20,6 @@
     display: flex;
 }
 
-.button-container {
-    display: flex;
-    justify-items: center;
-}
-
 .zipcode-input {
     border: none;
     background: #FFE696;
