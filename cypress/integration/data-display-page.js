@@ -3,10 +3,25 @@ describe('Sol Aware Data Display page', () => {
         cy.visit('http://localhost:3000/')
         cy.get('[data-cy=zip-input]').type('96740')
         
-        
+        const getTodayDate = () => {
+            const today = new Date()
+            let yyyy = today.getFullYear()
+            let mm = today.getMonth() + 1
+            let dd = today.getDate()
+            
+            if(dd < 10) {
+                dd = `0${dd}`
+            } 
+            if(mm < 10) {
+                mm = `0${mm}`
+            }
+            return `${yyyy}${mm}${dd}`
+        }
+
+
         cy.get('[data-cy=go-button]').click()
         cy.fixture('./uvData.json').then((uvData) => {
-        cy.intercept('GET', `https://s3.amazonaws.com/dmap-api-cache-ncc-production/20220117/hourly/zip/96740.json`, {
+        cy.intercept('GET', `https://s3.amazonaws.com/dmap-api-cache-ncc-production/${getTodayDate()}/hourly/zip/96740.json`, {
             statusCode: 200, 
             body: uvData})
         })
