@@ -1,22 +1,21 @@
 .header{
-    height: 16vh;
     display: flex;
+    height: 16vh;
     justify-content: space-between;
 }
 
 .nav-bar {
     display: flex;
-    margin-right: 80px;
-    margin-top: 20px;
+    margin-top: 20px 80px 0 0;
 }
 
 .nav-item {
     font-family: 'Spartan';
     font-size: 20px;
-    padding: 18px 12px;
-    width: 120px;
     list-style-type: none;
+    padding: 18px 12px;
     text-decoration: none;
+    width: 120px;
 }
 
 .nav-item.home {
@@ -29,9 +28,8 @@
 
 .title-logo {
     height: 90px;
+    margin: 20px 0 0 60px;
     width: 360px;
-    margin-top: 20px;
-    margin-left: 60px;
 }
 
 
@@ -43,30 +41,30 @@
 
 @media screen and (max-width: 920px) {
     .nav-bar {
-        margin-right: 40px;
         display: flex;
         flex-direction: column;
+        margin-right: 40px;
     }
     .nav-item {
         font-family: 'Spartan';
         font-size: 18px;
-        padding: 8px 6px;
         list-style-type: none;
+        padding: 8px 6px;
         text-decoration: none;
     }
 }
 
 @media screen and (max-width: 380px) {
     .header{
-        height: 19vh;
         display: flex;
         flex-direction: column;
+        height: 19vh;
     }
 
     .title-logo {
         height: 70px;
-        width: 240px;
         margin: auto;
+        width: 240px;
     }
 
     .nav-bar {
@@ -78,19 +76,19 @@
     .nav-item {
         font-family: 'Spartan';
         font-size: 18px;
-        padding: 6px 6px;
         list-style-type: none;
+        padding: 6px 6px;
         text-decoration: none;
     }
     .small-grid {
+        align-items: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-items: center;
     } 
     .small-text {
-        width: 400x;
         text-align: center;
+        width: 400x;
     }
     
     .home-image {
@@ -101,15 +99,15 @@
 
 @media screen and (max-width: 600px) {
     .header{
-        height: 19vh;
         display: flex;
         flex-direction: column;
+        height: 19vh;
     }
     
     .title-logo {
         height: 70px;
-        width: 240px;
         margin: auto;
+        width: 240px;
     }
 
     .nav-bar {
@@ -121,19 +119,19 @@
     .nav-item {
         font-family: 'Spartan';
         font-size: 18px;
-        padding: 6px 6px;
         list-style-type: none;
+        padding: 6px 6px;
         text-decoration: none;
     }
     .small-grid {
+        align-items: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-items: center;
     } 
     .small-text {
-        width: 400x;
         text-align: center;
+        width: 400x;
     }
     
     .home-image {

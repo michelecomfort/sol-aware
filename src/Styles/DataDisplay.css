@@ -1,48 +1,46 @@
 * {
-    font-family: 'Spartan';
     color: #3F3E3E;
+    font-family: 'Spartan';
 }
 
 .error-message {
     color: red;
     font-size: 40px;
     margin: 100px auto;
-
     text-align: center;
     width: 82%;
 }
 .data-section {
     background-color: #FFE696;
-    height: 66vh;
     display: flex;
     flex-direction: column;
+    height: 66vh;
 }
 
 .data-top {
+    border-bottom: 1px solid #EDC95A;
     display: flex;
     margin-bottom: 4px;
-    border-bottom: 1px solid #EDC95A;
 }
 
 .location-date {
+    align-content: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
-    align-items: center;
 }
 
 .location,
 .date {
+    display: flex;
     font-size: 24px;
     margin: 0 120px 10px 160px;
-    display: flex;
 }
 
 .daily-uv {
-    display: flex;
     align-items: center;
-    
+    display: flex;
 }
 
 .uv-max {
@@ -56,44 +54,43 @@
 }
 
 .high-low-key {
-    margin: 54px 30px 0;
     font-size: 24px;
+    margin: 54px 30px 0;
 }
 
 .max-number {
-    padding: 20px;
-    font-size: 32px;
-    margin: 0;
-    text-align: center;
-    border-radius: 4px;
     background: #FFE696;
+    border-radius: 4px;
     box-shadow: inset 5px 5px 10px #baa86e,
                 inset -5px -5px 10px #ffffbf;
+    font-size: 32px;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
 }
 
 .safe-exposure {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin: 20px 0 0 140px ;
 }
 
 .safe-exposure-heading {
     font-size: 30px;
-    margin-top: 6px;
-    margin-bottom: 10px;
+    margin: 6px 0 10px 0;
 }
 
 input {
-    text-align: center;
-    border: none;
-    margin: 10px 20px;
-    width: 180px;
-    height: 32px;
-    border-radius: 4px;
     background: #FFE696;
+    border: none;
+    border-radius: 4px;
     box-shadow: inset 5px 5px 10px #baa86e,
                 inset -5px -5px 10px #ffffbf;
+    height: 32px;
+    margin: 10px 20px;
+    text-align: center;
+    width: 180px;
 }
 
 .exposure-inputs {
@@ -103,28 +100,27 @@ input {
 
 .exposure-minutes {
     font-size: 18px;
-    width: 100%;
-    text-align: center;
     margin: 0 auto;
+    text-align: center;
+    width: 100%;
 }
 
 
 .bottom-section {
+    align-items: center;
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    /* height: 20vh; */
 }
 
 .icon-grid {
+    align-items: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: 80%;
-    margin: 0 auto;
     justify-items: center;
-    align-items: center;
+    margin: 0 auto;
+    width: 80%;
 }
 
 .icon {
@@ -132,23 +128,15 @@ input {
 }
 
 @media screen and (max-width: 800px) {
-    .data-section {
-        /* background-color: #FFE696; */
-        /* height: 100vh; */
-        /* display: flex; */
-        /* flex-direction: column; */
-    }
-
     .data-top {
-        margin-bottom: 20px;
         border-bottom: none;
+        margin-bottom: 20px;
     }
 
     .location,
     .date {
         font-size: 24px;
         margin: 0 68px 0 60px;
-        /* display: flex; */
         text-align: center;
     }
     .location {
@@ -156,7 +144,6 @@ input {
     }
 
     .safe-exposure {
-
         margin: 20px 10px 0 14px ;
     }
 
@@ -170,19 +157,15 @@ input {
     }
     
     .protection-message {
-        margin-top: 0px;
         font-size: 30px;
+        margin-top: 0px;
     }
 }
 
 @media screen and (max-width: 400px) {
     .data-top {
-        flex-direction: column;
         align-items: center;
-    }
-
-    .data-section {
-        /* height: 0; */
+        flex-direction: column;
     }
 
     .high-low-key {
@@ -196,11 +179,10 @@ input {
     
     .location{
         margin-bottom: 10px;
-
     }
 
     .uv-max {
-        margin: 0 0 0 70px;
+        margin-left: 70px;
     }
 
     .safe-exposure-heading {
@@ -209,8 +191,8 @@ input {
     }
 
     .bottom-section {
-        margin-top: 30px;
         height: 30vh;
+        margin-top: 30px;
         text-align: center;
     }
 }

@@ -1,19 +1,18 @@
 .hourly-chart-container {
-    margin: 0 auto;
-    width: 760px;
-    display: flex; 
-    justify-content: center;
     align-items: center; 
-    border-radius: 4px;
     background: #FFE696;
+    border-radius: 4px;
     box-shadow: inset 5px 5px 10px #baa86e,
                 inset -5px -5px 10px #ffffbf;
-                margin-bottom: 14px;
+    display: flex; 
+    justify-content: center;
+    margin: 0 auto 14px;
+    width: 760px;
 }
 
 .chart {
-    width: 72%;
     padding: 8px 0;
+    width: 72%;
 }
 
 @media screen and (max-width: 800px) {
@@ -22,7 +21,7 @@
     }
 
     .chart {
-        width: 90%;
         padding: 8px 0;
+        width: 90%;
     }
 }
