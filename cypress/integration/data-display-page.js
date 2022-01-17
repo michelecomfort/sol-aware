@@ -2,102 +2,11 @@ describe('Sol Aware Data Display page', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000/')
         cy.get('[data-cy=zip-input]').type('96740')
-
+        
+        
         cy.get('[data-cy=go-button]').click()
-
-        cy.intercept('GET', `https://s3.amazonaws.com/dmap-api-cache-ncc-production/20220116/hourly/zip/96740.json`, {
-            "uv-data": [
-                {
-                    "ORDER": 4,
-                    "ZIP": "96740",
-                    "DATE_TIME": "JAN/17/2022 04 AM",
-                    "UV_VALUE": 0
-                    },
-                    {
-                    "ORDER": 5,
-                    "ZIP": "96740",
-                    "DATE_TIME": "JAN/17/2022 05 AM",
-                    "UV_VALUE": 0
-                    },
-                    {
-                    "ORDER": 6,
-                    "ZIP": "96740",
-                    "DATE_TIME": "JAN/17/2022 06 AM",
-                    "UV_VALUE": 0
-                    },
-                    {
-                    "ORDER": 7,
-                    "ZIP": "96740",
-                    "DATE_TIME": "JAN/17/2022 07 AM",
-                    "UV_VALUE": 0
-                    },
-                    {
-                    "ORDER": 8,
-                    "ZIP": "96740",
-                    "DATE_TIME": "JAN/17/2022 08 AM",
-                    "UV_VALUE": 1
-                    },
-                    {
-                    "ORDER": 9,
-                    "ZIP": "96740",
-                    "DATE_TIME": "JAN/17/2022 09 AM",
-                    "UV_VALUE": 2
-                    },
-                    {
-                    "ORDER": 10,
-                    "ZIP": "96740",
-                    "DATE_TIME": "JAN/17/2022 10 AM",
-                    "UV_VALUE": 4
-                    },
-                    {
-                    "ORDER": 11,
-                    "ZIP": "96740",
-                    "DATE_TIME": "JAN/17/2022 11 AM",
-                    "UV_VALUE": 6
-                    },
-                    {
-                    "ORDER": 12,
-                    "ZIP": "96740",
-                    "DATE_TIME": "JAN/17/2022 12 PM",
-                    "UV_VALUE": 7
-                    },
-                    {
-                    "ORDER": 13,
-                    "ZIP": "96740",
-                    "DATE_TIME": "JAN/17/2022 01 PM",
-                    "UV_VALUE": 7
-                    },
-                    {
-                    "ORDER": 14,
-                    "ZIP": "96740",
-                    "DATE_TIME": "JAN/16/2022 02 PM",
-                    "UV_VALUE": 6
-                    },
-                    {
-                    "ORDER": 15,
-                    "ZIP": "96740",
-                    "DATE_TIME": "JAN/16/2022 03 PM",
-                    "UV_VALUE": 3
-                    },
-                    {
-                    "ORDER": 16,
-                    "ZIP": "96740",
-                    "DATE_TIME": "JAN/16/2022 04 PM",
-                    "UV_VALUE": 1
-                    },
-                    {
-                    "ORDER": 17,
-                    "ZIP": "96740",
-                    "DATE_TIME": "JAN/16/2022 05 PM",
-                    "UV_VALUE": 0
-                    },
-                    {
-                    "ORDER": 18,
-                    "ZIP": "96740",
-                    "DATE_TIME": "JAN/16/2022 06 PM",
-                    "UV_VALUE": 0
-                    }]
-        })
+        cy.intercept('GET', `https://s3.amazonaws.com/dmap-api-cache-ncc-production/${getTodayDate()}/hourly/zip/96740.json`, {stateCode: 200, fixture: 'uvData.json'})
+            
         
     })
 
