@@ -104,7 +104,7 @@ const DataDisplay = ({ zipcode, addToSavedZips })  => {
                     <div className='location-date'>
                         <h3 className='location' data-cy='city-state'>{cityState}</h3>
                         <h4 className='date' data-cy='date'>{date}</h4>
-                        <button onClick={() => saveThisZip()}>Save location</button>
+                        <button className='save-location-button' onClick={() => saveThisZip()}>Save location</button>
                     </div>
                     <div className='daily-uv'>
                         <div className='uv-max'>

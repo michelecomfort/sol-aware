@@ -14,7 +14,7 @@ const ZipInput = ({ addZipcode, savedZipcodes }) => {
 
     const makeZipButtons = savedZipcodes.map(zip => {
         return (
-            <Link to='/datadisplay'><button onClick={() => sendZip(zip)}>{zip}</button></Link>
+            <Link to='/datadisplay'><button className='zipcodes'onClick={() => sendZip(zip)}>{zip}</button></Link>
         )
     })
 
@@ -22,12 +22,17 @@ const ZipInput = ({ addZipcode, savedZipcodes }) => {
         <form className='zipcode-form' data-cy='zipcode-form'>
             <div className='input-section'>
                 <h2 className='slogan' data-cy='sub-heading'>skin health starts with sun knowledge</h2>
-                <div className='input-button'>
-                    <label className='zipcode'>
-                        <input className='zipcode-input' placeholder='Zip Code' data-cy='zip-input' onChange={(e) => sendZip(e.target.value)} />
-                    </label>
-                    <Link to='/datadisplay' className='go-button' data-cy='go-button'>Go</Link>
-                    {makeZipButtons}
+                <div className='input-saved-zips'>
+                    <div className='input-button'>
+                        <label className='zipcode'>
+                            <input className='zipcode-input' placeholder='Zip Code' data-cy='zip-input' onChange={(e) => sendZip(e.target.value)} />
+                        </label>
+                        <Link to='/datadisplay' className='go-button' data-cy='go-button'>Go</Link>
+                    </div>
+                        <div className='saved-zips'>
+                            {makeZipButtons}    
+                        </div>
+
                 </div>
             </div>
             
