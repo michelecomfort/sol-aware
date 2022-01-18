@@ -105,7 +105,7 @@ const DataDisplay = ({ zipcode, addToSavedZips })  => {
     
     return (
         <main>
-            { error ? <p className='error-message'>Sorry, there's been an error: '{error}' Please return to the home page and try again!</p> : 
+            { error || !zipcode ? <p className='error-message'>Sorry, there's been an error: '{error}' Please return to the home page and try again!</p> : 
             <section className='data-section' data-cy='data-section' aria-label='Section displaying data of uv levels per zipcode location'>
                 <div className='data-top'>
                     <div className='location-date'>
