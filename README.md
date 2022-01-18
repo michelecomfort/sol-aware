@@ -33,21 +33,26 @@ Deployed project: [here]()
   ![Search_zipcode](https://user-images.githubusercontent.com/86859884/149997940-c1af6110-4b21-4d8a-836d-85d980055cd6.gif)
   
   **Data Display**:
+  
   ![Calculating_exposure_minutes](https://user-images.githubusercontent.com/86859884/149998957-1e68ad64-3725-40a7-bc5f-ddc30873f32f.gif)
 
 
-  **Saving Locations**
+  **Saving Locations**:
+  
   ![Save_locations](https://user-images.githubusercontent.com/86859884/149998205-7f7b05a0-9cba-4c46-8afa-7679bc836fec.gif)
 
-  **Informational Charts**
+  **Informational Charts**:
+  
   ![Navigating](https://user-images.githubusercontent.com/86859884/149998277-c456a942-cd0d-4499-b180-c0f691b726bb.gif)
 
   **Table Responsive Views**:
-  <img width="300" alt="Screen Shot 2022-01-18 at 11 10 55 AM" src="https://user-images.githubusercontent.com/86859884/149998413-85cce65e-c9ec-463a-9d8f-2175db4f987e.png">
-  <img width="300" alt="Screen Shot 2022-01-18 at 11 12 24 AM" src="https://user-images.githubusercontent.com/86859884/149998351-82e680c0-7706-4e05-a869-8fa15a21b7a6.png">
-  <img width="300" alt="Screen Shot 2022-01-18 at 11 10 47 AM" src="https://user-images.githubusercontent.com/86859884/149998498-1c761b3f-414e-4f46-9218-d6038b0fbf7b.png">
+  
+  <img width="260" alt="Screen Shot 2022-01-18 at 11 10 55 AM" src="https://user-images.githubusercontent.com/86859884/149998413-85cce65e-c9ec-463a-9d8f-2175db4f987e.png">
+  <img width="260" alt="Screen Shot 2022-01-18 at 11 12 24 AM" src="https://user-images.githubusercontent.com/86859884/149998351-82e680c0-7706-4e05-a869-8fa15a21b7a6.png">
+  <img width="260" alt="Screen Shot 2022-01-18 at 11 10 47 AM" src="https://user-images.githubusercontent.com/86859884/149998498-1c761b3f-414e-4f46-9218-d6038b0fbf7b.png">
 
   **Mobile Responsive Views**:
+  
   <img width="150" alt="Screen Shot 2022-01-18 at 11 10 05 AM" src="https://user-images.githubusercontent.com/86859884/149998575-5007f68e-6dc4-4edc-bc24-1af7b86b3caf.png">
   <img width="150" alt="Screen Shot 2022-01-18 at 11 10 23 AM" src="https://user-images.githubusercontent.com/86859884/149998611-7729965d-888f-479c-a7fd-b52421baa19b.png">
   <img width="150" alt="Screen Shot 2022-01-18 at 11 10 34 AM" src="https://user-images.githubusercontent.com/86859884/149998648-7a3821da-1c65-495c-9000-f1b3a15bc504.png">
