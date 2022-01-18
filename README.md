@@ -75,7 +75,14 @@ A series of calculations run on the stored data to grab the highest UV index of 
   - [Michele Comfort](https://github.com/michelecomfort)
 
 ## Wins
-  - 
+  - Conceptualized and designed entire application to completing
+  - Successfully utilized functional component using React hooks
+  - Responsive layout for desktop, tablet and mobile devices
   
 ## Challenges + Improvements
+  - There are inconsistencies in the UV data derived from the API such as different time values closer to the international data line (specifically with Hawaii).
+  - Timing issues with making calls to two separate with APIs
+  - One API returned status 200 even with an invalid zipcode - had to add additional checks in my error handling
+  - Data can only be pulled up to 36 hours in the future - ideally, having a forecast addition might be nice for users to plan ahead
+  - While global state management might be overall for this simple application, it would be a straight-forward implementatio
   - 
