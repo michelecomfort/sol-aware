@@ -30,7 +30,7 @@ Deployed project: [here]()
   Sol Aware is a web application designed for users who are proactively taking care of their skin, by limiting exposure to high harmful UV rays or are needing to be cautious due to ongoing skin conditions, diseases, melanoma or cancer. The app makes use of two public APIs ([Envirofacts Data Service API](https://www.epa.gov/enviro/envirofacts-data-service-api) and [Ziptastic API](https://ziptasticapi.com/)) that allow the user to search using their zip code. Once the user types in a valid zip code, they can click 'Go' and be taken to a data page, which lists the city and state and well as the current date. It will show the user the UV high of the day, the UV status (low, moderate, high, very high, extreme). The user will also see a section where they can enter their skin type and the application will immediately calculate the exposure of direct sunlight based on the UV max of the day and their skin type. Beneath the initial data, the user will see a chart populated with UV indices for the entire day.
   
   **Landing Page**
-  ![Search_zipcode](https://user-images.githubusercontent.com/86859884/149997940-c1af6110-4b21-4d8a-836d-85d980055cd6.gif)
+  ![Search_zip](https://user-images.githubusercontent.com/86859884/150004693-d0d3aa76-f09b-49a3-99c3-fd1b6a641ddb.gif)
   
   **Data Display**:
   ![Capturing_exposure_minutes](https://user-images.githubusercontent.com/86859884/150004173-d88a0c38-7c15-4697-91f2-31183e9b02a6.gif)
