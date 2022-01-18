@@ -19,15 +19,15 @@ const ZipInput = ({ addZipcode, savedZipcodes }) => {
     })
 
     return (
-        <form className='zipcode-form' data-cy='zipcode-form'>
+        <form className='zipcode-form' data-cy='zipcode-form' aria-label='Zipcode search section'>
             <div className='input-section'>
                 <h2 className='slogan' data-cy='sub-heading'>skin health starts with sun knowledge</h2>
                 <div className='input-saved-zips'>
                     <div className='input-button'>
                         <label className='zipcode'>
-                            <input className='zipcode-input' placeholder='Zip Code' data-cy='zip-input' onChange={(e) => sendZip(e.target.value)} />
+                            <input className='zipcode-input' placeholder='Zip Code' data-cy='zip-input' aria-required='true' onChange={(e) => sendZip(e.target.value)} />
                         </label>
-                        <Link to='/datadisplay' className='go-button' data-cy='go-button'>Go</Link>
+                        <Link to='/datadisplay' className='go-button' data-cy='go-button' aria-label='Go button to retrieve data'>Go</Link>
                     </div>
                         <div className='saved-zips'>
                             {makeZipButtons}    
@@ -36,7 +36,7 @@ const ZipInput = ({ addZipcode, savedZipcodes }) => {
                 </div>
             </div>
             
-            <aside className='small-grid' data-cy='small-grid'>
+            <aside className='small-grid' data-cy='small-grid' aria-label='Photos of people with text regarding skin health'>
                 <div className='small-info-section' data-cy='small-info-section'>
                     <p className='small-text'>The health of our skin starts with decisions we make everyday</p>
                     <img src={require('../assets/sunflower-woman.jpeg')} alt='Woman in a field of sunflowers'className='home-image'/>

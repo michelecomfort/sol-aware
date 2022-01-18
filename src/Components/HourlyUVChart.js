@@ -29,7 +29,7 @@ const HourlyUVChart = ({ uvData }) => {
         ]
     };
         return (
-            <div className='hourly-chart-container' data-cy='hourly-chart-container'>
+            <div className='hourly-chart-container' data-cy='hourly-chart-container' aria-label='Chart displaying hourly UV indices'>
                 <div className='chart'>
                     <Bar
                         data={chartData}

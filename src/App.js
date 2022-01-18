@@ -14,8 +14,12 @@ const App = () => {
 
   const addZipcode = (zip) => setZipcode(zip)
 
-  const addToSavedZips = (zipcode) => saveZipcode([...savedZipcodes, zipcode])
-    
+  const addToSavedZips = (zipcode) => {
+    if(!savedZipcodes.includes(zipcode)) {
+      saveZipcode([...savedZipcodes, zipcode])
+    }
+  }
+  
   return (
       <main className="nav">
         <Header />

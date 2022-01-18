@@ -106,12 +106,12 @@ const DataDisplay = ({ zipcode, addToSavedZips })  => {
     return (
         <main>
             { error ? <p className='error-message'>Sorry, there's been an error: '{error}' Please return to the home page and try again!</p> : 
-            <section className='data-section' data-cy='data-section'>
+            <section className='data-section' data-cy='data-section' aria-label='Section displaying data of uv levels per zipcode location'>
                 <div className='data-top'>
                     <div className='location-date'>
                         <h3 className='location' data-cy='city-state'>{cityState}</h3>
                         <h4 className='date' data-cy='date'>{date}</h4>
-                        <button className='save-location-button' onClick={() => saveThisZip()}>Save location</button>
+                        <button className='save-location-button' aria-label='Save location button'onClick={() => saveThisZip()}>Save location</button>
                     </div>
                     <div className='daily-uv'>
                         <div className='uv-max'>
@@ -123,7 +123,7 @@ const DataDisplay = ({ zipcode, addToSavedZips })  => {
                     <div className='safe-exposure' data-cy='safe-exposure'>
                         <h3 className='safe-exposure-heading' data-cy='safe-exposure-heading'>Safe Exposure for Skin Type</h3>
                         <div className='exposure-inputs'>
-                            <input onChange={(e) => grabExposureMinutes(e.target.value)} list='skin-type' placeholder='skin type' data-cy='skin-type-input'/>
+                            <input onChange={(e) => grabExposureMinutes(e.target.value)} list='skin-type' aria-label='Choose skin type to determine your safe exposure minutes' placeholder='skin type' data-cy='skin-type-input'/>
                                 <datalist id='skin-type'>
                                     <option value='Type I'>Type I</option>
                                     <option value='Type II'>Type II</option>

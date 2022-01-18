@@ -1,37 +1,55 @@
-.input-section {
-    align-items: center;
-    background-color: #FFE696;
+* {
+    font-family: 'Spartan';
+}
+
+.input-section,
+.input-button,
+.input-saved-zips,
+.saved-zips,
+.go-button {
     display: flex;
+}
+
+.input-section,
+.input-saved-zips,
+.small-info-section {
     flex-direction: column;
+}
+
+.input-section,
+.input-button,
+.zipcodes,
+.go-button,
+.small-info-section {
+    align-items: center;
+}
+
+.zipcode-input,
+.zipcodes,
+.go-button,
+.home-image {
+    border-radius: 4px;
+}
+
+.input-section {
+    background-color: #FFE696;
     height: 42vh;
     width: 100%;
 }
 
 .slogan {
     color: #3F3E3E;
-    font-family: 'Spartan';
     font-size: 36px;
     width: 30%;
     text-align: center;
 }
 
-.input-button {
-    align-items: center;
-    display: flex;
-}
-
-.input-saved-zips {
-    display: flex;
-    flex-direction: column;
-}
 .zipcode-input {
     border: none;
     background: #FFE696;
-    border-radius: 4px;
     box-shadow: inset 5px 5px 10px #baa86e,
                 inset -5px -5px 10px #ffffbf;
     cursor: pointer;
-    font-family: 'Spartan';
     font-size: 24px;
     height: 40px;
     margin-right: 20px;
@@ -39,47 +57,34 @@
     width: 160px; 
 }
 
-.saved-zips {
-    display: flex;
-}
-
-.zipcodes {
-
-    align-items: center;
+.zipcodes,
+.go-button {
     background: #FFE696;
     border: none;
-    border-radius: 4px;
     box-shadow:  5px 5px 10px #665c3c,
                 -5px -5px 10px #fffff0;
     color: #7B7777;
-    cursor: pointer;
-    height: 22px;
+    cursor: pointer; 
     justify-content: center;
+    text-decoration: none;
+    transition: transform .2s;
+}
+.zipcodes {
+    height: 22px;
     margin: 0 10px;
     text-decoration: none;
 }
+
 .go-button {
-    align-items: center;
-    background: #FFE696;
-    border: none;
-    border-radius: 4px;
-    box-shadow:  5px 5px 10px #665c3c,
-    -5px -5px 10px #fffff0;
-    color: #7B7777;
-    cursor: pointer;
-    display: flex;
-    font-family: 'Spartan';
     font-size: 24px;
     height: 56px;
-    justify-content: center;
     margin: 22px;
     text-align: center;
-    text-decoration: none;
-    transition: transform .2s;
     width: 56px;
 }
 
-.go-button:hover {
+.go-button:hover,
+.zipcodes:hover {
     transform: scale(.9);
 }
 
@@ -90,9 +95,7 @@
 }
 
 .small-info-section {
-    align-items: center;
     display: grid;
-    flex-direction: column;
     justify-items: center;
 }
 
@@ -102,7 +105,6 @@
 }
 
 .home-image {
-    border-radius: 4px;
     width: 280px;
 }
 

@@ -1,11 +1,14 @@
-.header{
+.header,
+.nav-bar {
     display: flex;
+}
+
+.header{
     height: 16vh;
     justify-content: space-between;
 }
 
 .nav-bar {
-    display: flex;
     margin-top: 20px 80px 0 0;
 }
 
