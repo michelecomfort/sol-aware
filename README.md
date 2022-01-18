@@ -64,12 +64,14 @@ A series of calculations run on the stored data to grab the highest UV index of 
   - React Router
   - React hooks
   - Cypress Testing Framework
+  - Chart.js
   - Javascript
   - CSS HTML
   - VSCode
   - Git Version Control / GitHub
   - Google Chrome or Web Browser of User's Choice
   - Mac OS Terminal/Command Line
+  - GitHub pages deployment
 
 ## Contributors
   - [Michele Comfort](https://github.com/michelecomfort)
@@ -84,5 +86,5 @@ A series of calculations run on the stored data to grab the highest UV index of 
   - Timing issues with making calls to two separate with APIs
   - One API returned status 200 even with an invalid zipcode - had to add additional checks in my error handling
   - Data can only be pulled up to 36 hours in the future - ideally, having a forecast addition might be nice for users to plan ahead
-  - While global state management might be overall for this simple application, it would be a straight-forward implementatio
-  - 
+  - While global state management might be overall for this simple application, it would be a straight-forward implementation
+  
