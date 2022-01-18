@@ -14,7 +14,7 @@ const ZipInput = ({ addZipcode, savedZipcodes }) => {
 
     const makeZipButtons = savedZipcodes.map(zip => {
         return (
-            <Link to='/datadisplay'><button className='zipcodes'onClick={() => sendZip(zip)}>{zip}</button></Link>
+            <Link to='/datadisplay' key={zip}><button className='zipcodes' onClick={() => sendZip(zip)}>{zip}</button></Link>
         )
     })
 
@@ -58,5 +58,6 @@ const ZipInput = ({ addZipcode, savedZipcodes }) => {
 export default ZipInput
 
 ZipInput.propTypes = {
-    addZipcode: propTypes.func.isRequired
+    addZipcode: propTypes.func.isRequired,
+    savedZipcodes: propTypes.array.isRequired
 }

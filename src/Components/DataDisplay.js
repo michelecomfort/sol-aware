@@ -1,9 +1,8 @@
-// import React, { Component } from 'react'
+import React, { useState, useEffect, useLayoutEffect } from 'react'
 import HourlyUVChart from './HourlyUVChart'
 import '../Styles/DataDisplay.css'
 import apiCalls from '../apiCalls.js'
 
-import React, { useState, useEffect, useLayoutEffect } from 'react'
 import propTypes from 'prop-types'
 const date = new Date()
 const month = date.getUTCMonth() + 1
@@ -25,10 +24,9 @@ const DataDisplay = ({ zipcode, addToSavedZips })  => {
                     if(data.error) {
                         setError(data.error)
                     } else {
-                        const month = data[0]['DATE_TIME'].split(' ')[0].split('/')[0]
-                        const day = data[0]['DATE_TIME'].split(' ')[0].split('/')[1]
+                        
                         setUvData(data)
-                        setDate(month + ' ' + day)
+                        
                     }
                 })
                 
@@ -44,12 +42,21 @@ const DataDisplay = ({ zipcode, addToSavedZips })  => {
     }, [])
 
     useLayoutEffect(() => {
-        const high = uvData.map(obj => {
-            return obj['UV_VALUE']
-        }).sort((a, b) => {
-            return b - a
-        })
-        setUvHigh(high[0])
+        if(uvData.length > 0) {
+            const high = uvData.map(obj => {
+                return obj['UV_VALUE']
+            }).sort((a, b) => {
+                return b - a
+            })
+            setUvHigh(high[0])
+    
+                const month = uvData[0]['DATE_TIME'].split(' ')[0].split('/')[0]
+                const day = uvData[0]['DATE_TIME'].split(' ')[0].split('/')[1]
+                setDate(month + ' ' + day)
+
+        }
+    
+        
     })
 
     const getUvStatus = () => {
@@ -156,5 +163,6 @@ const DataDisplay = ({ zipcode, addToSavedZips })  => {
 export default DataDisplay
 
 DataDisplay.propTypes = {
-    zipcode: propTypes.string.isRequired
+    zipcode: propTypes.string.isRequired,
+    addToSavedZips: propTypes.func.isRequired
 }

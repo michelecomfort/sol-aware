@@ -158,6 +158,10 @@ input {
         margin-bottom: 18px;
     }
 
+    .save-location-button {
+        margin: 10px 0 0 0;
+    }
+
     .safe-exposure {
         margin: 20px 10px 0 14px ;
     }

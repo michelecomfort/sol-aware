@@ -1,11 +1,30 @@
 describe('Sol Aware Data Display page', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000/')
+        .wait(2000)
+        const getTodayDate = () => {
+            const today = new Date()
+            let yyyy = today.getFullYear()
+            let mm = today.getMonth() + 1
+            let dd = today.getDate()
+            
+            if(dd < 10) {
+                dd = `0${dd}`
+            } 
+            if(mm < 10) {
+                mm = `0${mm}`
+            }
+            return `${yyyy}${mm}${dd}`
+        }
+            cy.intercept('GET', `https://s3.amazonaws.com/dmap-api-cache-ncc-production/${getTodayDate()}/hourly/zip/96740.json`, {
+                fixture: 'uvData.json'
+                })
+
         cy.get('[data-cy=zip-input]').type('96740')
         
-        
+
+
         cy.get('[data-cy=go-button]').click()
-        cy.intercept('GET', `https://s3.amazonaws.com/dmap-api-cache-ncc-production/${getTodayDate()}/hourly/zip/96740.json`, {stateCode: 200, fixture: 'uvData.json'})
             
         
     })
@@ -22,6 +41,7 @@ describe('Sol Aware Data Display page', () => {
 
     it('should display all the correct element in the Data Display page', () => {
         cy.get('[data-cy=city-state]')
+            .wait(2000)
             .should('exist')
             .contains('KAILUA KONA, HI')
 
@@ -34,7 +54,7 @@ describe('Sol Aware Data Display page', () => {
 
         cy.get('[data-cy=max-number]')
             .should('exist')
-            .contains('7')
+            .contains('9')
     })
 
     it('should have a safe sun exposure form', () => {
@@ -75,13 +95,13 @@ describe('Sol Aware Data Display page', () => {
             .should('have.value', 'Type VI')
     })
 
-    it.only('should allow user to enter their skin type and display the recommended max time of direct sun exposure for that day', () => {
+    it('should allow user to enter their skin type and display the recommended max time of direct sun exposure for that day', () => {
         cy.get('[data-cy=skin-type-input]')
             .wait(2000)
             .type('Type V')
             
         cy.get('[data-cy=exposure-minutes]')
-            .contains('Your maximum safe exposure time is 76 minutes.')
+            .contains('Your maximum safe exposure time is 59 minutes.')
     })
 
     it('should display a chart with current hourly values of uv indices', () => {
