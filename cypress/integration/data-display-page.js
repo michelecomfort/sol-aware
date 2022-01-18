@@ -1,8 +1,7 @@
 describe('Sol Aware Data Display page', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000/')
-        cy.get('[data-cy=zip-input]').type('96740')
-        
+        .wait(2000)
         const getTodayDate = () => {
             const today = new Date()
             let yyyy = today.getFullYear()
@@ -17,15 +16,15 @@ describe('Sol Aware Data Display page', () => {
             }
             return `${yyyy}${mm}${dd}`
         }
+            cy.intercept('GET', `https://s3.amazonaws.com/dmap-api-cache-ncc-production/${getTodayDate()}/hourly/zip/96740.json`, {
+                fixture: 'uvData.json'
+                })
+
+        cy.get('[data-cy=zip-input]').type('96740')
+        
 
 
         cy.get('[data-cy=go-button]').click()
-        cy.fixture('./uvData.json').then((uvData) => {
-        cy.intercept('GET', `https://s3.amazonaws.com/dmap-api-cache-ncc-production/${getTodayDate()}/hourly/zip/96740.json`, {
-            statusCode: 200, 
-            body: uvData})
-        })
-        
             
         
     })
@@ -42,6 +41,7 @@ describe('Sol Aware Data Display page', () => {
 
     it('should display all the correct element in the Data Display page', () => {
         cy.get('[data-cy=city-state]')
+            .wait(2000)
             .should('exist')
             .contains('KAILUA KONA, HI')
 

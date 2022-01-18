@@ -46,13 +46,13 @@
         "ORDER": 11,
         "ZIP": "96740",
         "DATE_TIME": "JAN/17/2022 11 AM",
-        "UV_VALUE": 6
+        "UV_VALUE": 7
         },
         {
         "ORDER": 12,
         "ZIP": "96740",
         "DATE_TIME": "JAN/17/2022 12 PM",
-        "UV_VALUE": 9
+        "UV_VALUE": 7
         },
         {
         "ORDER": 13,
@@ -64,13 +64,13 @@
         "ORDER": 14,
         "ZIP": "96740",
         "DATE_TIME": "JAN/16/2022 02 PM",
-        "UV_VALUE": 6
+        "UV_VALUE": 9
         },
         {
         "ORDER": 15,
         "ZIP": "96740",
         "DATE_TIME": "JAN/16/2022 03 PM",
-        "UV_VALUE": 3
+        "UV_VALUE": 6
         },
         {
         "ORDER": 16,
