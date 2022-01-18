@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/sol-aware/static/css/main.27541592.css",
+    "main.js": "/sol-aware/static/js/main.503cc374.js",
+    "static/js/787.41d12a19.chunk.js": "/sol-aware/static/js/787.41d12a19.chunk.js",
+    "static/media/generational.jpeg": "/sol-aware/static/media/generational.6cea166143353a7a48c6.jpeg",
+    "static/media/sunflower-woman.jpeg": "/sol-aware/static/media/sunflower-woman.1128c7966c89ea0d9121.jpeg",
+    "static/media/sunscreen-woman.jpeg": "/sol-aware/static/media/sunscreen-woman.7b45d094f8f15c526c88.jpeg",
+    "static/media/smiling-woman.jpeg": "/sol-aware/static/media/smiling-woman.ed236bb62e1d853ffe7a.jpeg",
+    "static/media/uv-index-guide.png": "/sol-aware/static/media/uv-index-guide.865176eb7d17e5c0cc16.png",
+    "static/media/sunscreen.png": "/sol-aware/static/media/sunscreen.fc12c39f17ef572429d7.png",
+    "static/media/skin-types.png": "/sol-aware/static/media/skin-types.dae9508137fb6e559e52.png",
+    "static/media/umbrella.png": "/sol-aware/static/media/umbrella.17dadab0ac065273ed1a.png",
+    "static/media/hat.png": "/sol-aware/static/media/hat.d1a3a714a43070a487c5.png",
+    "static/media/sol-aware-heading.png": "/sol-aware/static/media/sol-aware-heading.90e011af792bbfcf7af2.png",
+    "index.html": "/sol-aware/index.html",
+    "main.27541592.css.map": "/sol-aware/static/css/main.27541592.css.map",
+    "main.503cc374.js.map": "/sol-aware/static/js/main.503cc374.js.map",
+    "787.41d12a19.chunk.js.map": "/sol-aware/static/js/787.41d12a19.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.27541592.css",
+    "static/js/main.503cc374.js"
+  ]
+}
