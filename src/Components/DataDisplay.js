@@ -1,9 +1,8 @@
-// import React, { Component } from 'react'
+import React, { useState, useEffect, useLayoutEffect } from 'react'
 import HourlyUVChart from './HourlyUVChart'
 import '../Styles/DataDisplay.css'
 import apiCalls from '../apiCalls.js'
 
-import React, { useState, useEffect, useLayoutEffect } from 'react'
 import propTypes from 'prop-types'
 const date = new Date()
 const month = date.getUTCMonth() + 1
@@ -156,5 +155,6 @@ const DataDisplay = ({ zipcode, addToSavedZips })  => {
 export default DataDisplay
 
 DataDisplay.propTypes = {
-    zipcode: propTypes.string.isRequired
+    zipcode: propTypes.string.isRequired,
+    addToSavedZips: propTypes.func.isRequired
 }
