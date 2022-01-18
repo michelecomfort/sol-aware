@@ -55,6 +55,10 @@ Deployed project: [here]()
 
 ## Architecture
 
+This project utilizes functional components using React hooks to hold onto state. On page load, data has not been fetched. The zipcode depending data will fetch after user input. The zipcode is first used in an API call grabbing the city and state data. For this, I used the Ziptastic API. Next, an API call is run to fetch the hour UV data. For this fetch, both the current day and zipcode were needed for the API call. Data is stored in a Data Display component
+
+A series of calculations run on the stored data to grab the highest UV index of the day, and use that information against a user-chosen skin type to display a recommended max exposure time in direct sun for the day. Chart.js is also used in this project to show hourly data so a user can plan their outdoor time accordingly. The data bars in the chart change color based on UV index levels, anywhere from green indicating that UV levels are low and safe, up to violet which indicates UV levels are extreme.
+
 ## Technologies
   - React Framework
   - React Router
