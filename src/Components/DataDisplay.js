@@ -16,7 +16,6 @@ const DataDisplay = ({ zipcode, addToSavedZips })  => {
     const [exposureMinutes, setExposureMinutes] = useState('')
     const [error, setError] = useState('')
         
-
     useEffect(() => {
         if(zipcode) {
             apiCalls.getUvData(zipcode)
@@ -24,9 +23,7 @@ const DataDisplay = ({ zipcode, addToSavedZips })  => {
                     if(data.error) {
                         setError(data.error)
                     } else {
-                        
                         setUvData(data)
-                        
                     }
                 })
                 
@@ -50,13 +47,10 @@ const DataDisplay = ({ zipcode, addToSavedZips })  => {
             })
             setUvHigh(high[0])
     
-                const month = uvData[0]['DATE_TIME'].split(' ')[0].split('/')[0]
-                const day = uvData[0]['DATE_TIME'].split(' ')[0].split('/')[1]
-                setDate(month + ' ' + day)
-
+            const month = uvData[0]['DATE_TIME'].split(' ')[0].split('/')[0]
+            const day = uvData[0]['DATE_TIME'].split(' ')[0].split('/')[1]
+            setDate(month + ' ' + day)
         }
-    
-        
     })
 
     const getUvStatus = () => {
