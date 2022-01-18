@@ -84,10 +84,7 @@ input {
     display: flex;
 }
 
-.uv-max {
-    margin-bottom: 6px;
-}
-
+.uv-max,
 .max-heading {
     margin-bottom: 6px;
 }
