@@ -53,7 +53,7 @@ Deployed project: [here]()
 
 ## Architecture
 
-This project utilizes functional components using React hooks to hold onto state. On page load, data has not been fetched. The zipcode depending data will fetch after user input. The zipcode is first used in an API call grabbing the city and state data. For this, I used the Ziptastic API. Next, an API call is run to fetch the hour UV data. For this fetch, both the current day and zipcode were needed for the API call. Data is stored in a Data Display component
+This project utilizes functional components using React hooks to hold state. On page load, data has not been fetched. The zipcode dependent data will fetch after user input. The zipcode is first used in an API call grabbing the city and state data. For this, I used the Ziptastic API. Next, an API call is run to fetch the hour UV data. For this fetch, both the current day and zipcode were needed for the API call. Data is stored in a Data Display component
 
 A series of calculations run on the stored data to grab the highest UV index of the day, and use that information against a user-chosen skin type to display a recommended max exposure time in direct sun for the day. Chart.js is also used in this project to show hourly data so a user can plan their outdoor time accordingly. The data bars in the chart change color based on UV index levels, anywhere from green indicating that UV levels are low and safe, up to violet which indicates UV levels are extreme.
 
@@ -75,14 +75,17 @@ A series of calculations run on the stored data to grab the highest UV index of 
   - [Michele Comfort](https://github.com/michelecomfort)
 
 ## Wins
-  - Conceptualized and designed entire application to completing
-  - Successfully utilized functional component using React hooks
+  - Conceptualized and designed entire application to completion
+  - Successfully utilized functional components using React hooks
   - Responsive layout for desktop, tablet and mobile devices
   
 ## Challenges + Improvements
-  - There are inconsistencies in the UV data derived from the API such as different time values closer to the international data line (specifically with Hawaii).
-  - Timing issues with making calls to two separate with APIs
+  - There are inconsistencies in the UV data derived from the API such as different time values the closer the zip code is   
+    to the international data line (specifically with Hawaii).
+  - Timing issues with making calls with two separate APIs
   - One API returned status 200 even with an invalid zipcode - had to add additional checks in my error handling
-  - Data can only be pulled up to 36 hours in the future - ideally, having a forecast addition might be nice for users to plan ahead
-  - While global state management might be overall for this simple application, it would be a straight-forward implementation
+  - Data can only be pulled up to 36 hours in the future - ideally, having a forecast addition might be nice for users to 
+    plan ahead
+  - While global state management might be overkill for this simple application, it would be a straight-forward 
+    implementation
   
