@@ -51,9 +51,7 @@ Deployed project: [here]()
 
   **Mobile Responsive Views**:
   
-  <img width="150" alt="Screen Shot 2022-01-18 at 11 10 05 AM" src="https://user-images.githubusercontent.com/86859884/149998575-5007f68e-6dc4-4edc-bc24-1af7b86b3caf.png">
-  <img width="150" alt="Screen Shot 2022-01-18 at 11 10 23 AM" src="https://user-images.githubusercontent.com/86859884/149998611-7729965d-888f-479c-a7fd-b52421baa19b.png">
-  <img width="150" alt="Screen Shot 2022-01-18 at 11 10 34 AM" src="https://user-images.githubusercontent.com/86859884/149998648-7a3821da-1c65-495c-9000-f1b3a15bc504.png">
+  <img width="150" alt="Screen Shot 2022-01-18 at 11 10 05 AM" src="https://user-images.githubusercontent.com/86859884/149998575-5007f68e-6dc4-4edc-bc24-1af7b86b3caf.png"><img width="150" alt="Screen Shot 2022-01-18 at 11 10 23 AM" src="https://user-images.githubusercontent.com/86859884/149998611-7729965d-888f-479c-a7fd-b52421baa19b.png"><img width="150" alt="Screen Shot 2022-01-18 at 11 10 34 AM" src="https://user-images.githubusercontent.com/86859884/149998648-7a3821da-1c65-495c-9000-f1b3a15bc504.png">
 
 ## Architecture
 
