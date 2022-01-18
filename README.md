@@ -43,7 +43,7 @@ Deployed project: [here]()
   
   ![Navigating](https://user-images.githubusercontent.com/86859884/149998277-c456a942-cd0d-4499-b180-c0f691b726bb.gif)
 
-  **Table Responsive Views**:
+  **Tablet Responsive Views**:
   
   <img width="260" alt="Screen Shot 2022-01-18 at 11 10 55 AM" src="https://user-images.githubusercontent.com/86859884/149998413-85cce65e-c9ec-463a-9d8f-2175db4f987e.png"><img width="260" alt="Screen Shot 2022-01-18 at 11 12 24 AM" src="https://user-images.githubusercontent.com/86859884/149998351-82e680c0-7706-4e05-a869-8fa15a21b7a6.png"><img width="260" alt="Screen Shot 2022-01-18 at 11 10 47 AM" src="https://user-images.githubusercontent.com/86859884/149998498-1c761b3f-414e-4f46-9218-d6038b0fbf7b.png">
 
