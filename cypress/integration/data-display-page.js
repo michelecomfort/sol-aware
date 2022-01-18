@@ -54,7 +54,7 @@ describe('Sol Aware Data Display page', () => {
 
         cy.get('[data-cy=max-number]')
             .should('exist')
-            .contains('7')
+            .contains('9')
     })
 
     it('should have a safe sun exposure form', () => {
@@ -101,7 +101,7 @@ describe('Sol Aware Data Display page', () => {
             .type('Type V')
             
         cy.get('[data-cy=exposure-minutes]')
-            .contains('Your maximum safe exposure time is 76 minutes.')
+            .contains('Your maximum safe exposure time is 59 minutes.')
     })
 
     it('should display a chart with current hourly values of uv indices', () => {
