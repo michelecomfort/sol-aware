@@ -33,7 +33,8 @@ Deployed project: [here]()
   ![Search_zipcode](https://user-images.githubusercontent.com/86859884/149997940-c1af6110-4b21-4d8a-836d-85d980055cd6.gif)
   
   **Data Display**:
-  ![Calculate_exposure_minutes](https://user-images.githubusercontent.com/86859884/149998101-01a9e62e-df49-4afb-bdeb-4c09fd0c39eb.gif)
+  ![Calculating_exposure_minutes](https://user-images.githubusercontent.com/86859884/149998957-1e68ad64-3725-40a7-bc5f-ddc30873f32f.gif)
+
 
   **Saving Locations**
   ![Save_locations](https://user-images.githubusercontent.com/86859884/149998205-7f7b05a0-9cba-4c46-8afa-7679bc836fec.gif)
