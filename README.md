@@ -1,4 +1,4 @@
-# Sol Aware - a project by Michele Comfort
+# Sol Aware - a Project by Michele Comfort
 Mod3 2108 FE
 
 Deployed project: [here](https://michelecomfort.github.io/sol-aware/#/)
