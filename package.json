@@ -18,14 +18,14 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "start:ci": "npm start",
+    "start:ci": "npm start & wait-on http://localhost:3000",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "cy:verify": "cypress verify",
     "cy:info": "cypress info",
     "cy:version": "cypress version",
     "cy:cache:list": "cypress cache list",
-    "cy:run": "cypress run",
+    "cy:run": "npx cypress open",
     "cy:run:record": "cypress run --record",
     "cy:open": "cypress open"
   },
