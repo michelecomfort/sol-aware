@@ -18,7 +18,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "start:ci": "serve --no-clipboard --listen ${PORT:-8080}",
+    "start:ci": "npm start",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "cy:verify": "cypress verify",
