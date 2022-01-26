@@ -18,8 +18,16 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "npx cypress open",
-    "eject": "react-scripts eject"
+    "start:ci": "serve --no-clipboard --listen ${PORT:-8080}",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "cy:verify": "cypress verify",
+    "cy:info": "cypress info",
+    "cy:version": "cypress version",
+    "cy:cache:list": "cypress cache list",
+    "cy:run": "cypress run",
+    "cy:run:record": "cypress run --record",
+    "cy:open": "cypress open"
   },
   "eslintConfig": {
     "extends": [
