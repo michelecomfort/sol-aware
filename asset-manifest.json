@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/sol-aware/static/css/main.27541592.css",
-    "main.js": "/sol-aware/static/js/main.503cc374.js",
+    "main.js": "/sol-aware/static/js/main.7375e25c.js",
     "static/js/787.41d12a19.chunk.js": "/sol-aware/static/js/787.41d12a19.chunk.js",
     "static/media/generational.jpeg": "/sol-aware/static/media/generational.6cea166143353a7a48c6.jpeg",
     "static/media/sunflower-woman.jpeg": "/sol-aware/static/media/sunflower-woman.1128c7966c89ea0d9121.jpeg",
@@ -15,11 +15,11 @@
     "static/media/sol-aware-heading.png": "/sol-aware/static/media/sol-aware-heading.90e011af792bbfcf7af2.png",
     "index.html": "/sol-aware/index.html",
     "main.27541592.css.map": "/sol-aware/static/css/main.27541592.css.map",
-    "main.503cc374.js.map": "/sol-aware/static/js/main.503cc374.js.map",
+    "main.7375e25c.js.map": "/sol-aware/static/js/main.7375e25c.js.map",
     "787.41d12a19.chunk.js.map": "/sol-aware/static/js/787.41d12a19.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.27541592.css",
-    "static/js/main.503cc374.js"
+    "static/js/main.7375e25c.js"
   ]
 }
