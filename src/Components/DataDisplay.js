@@ -2,35 +2,34 @@ import React, { useState, useEffect, useLayoutEffect } from 'react'
 import HourlyUVChart from './HourlyUVChart'
 import '../Styles/DataDisplay.css'
 import apiCalls from '../apiCalls.js'
-
+import { useLocation } from 'react-router-dom'
 import propTypes from 'prop-types'
+
 const date = new Date()
 const month = date.getUTCMonth() + 1
 const day = date.getUTCDate()
 
-const DataDisplay = ({ zipcode, addToSavedZips })  => {
+const DataDisplay = ({ addToSavedZips })  => {
     const [cityState, setCityState] = useState('')
     const [uvData, setUvData] = useState([])
     const [date, setDate] = useState('')
     const [uvHigh, setUvHigh] = useState('')
     const [exposureMinutes, setExposureMinutes] = useState('')
     const [error, setError] = useState('')
-        
-
+    const zipcodeID = parseInt(useLocation().pathname.split('/')[1])
+    
     useEffect(() => {
-        if(zipcode) {
-            apiCalls.getUvData(zipcode)
+        if(zipcodeID) {
+            apiCalls.getUvData(zipcodeID)
                 .then(data => {
                     if(data.error) {
                         setError(data.error)
                     } else {
-                        
                         setUvData(data)
-                        
                     }
                 })
                 
-            apiCalls.getCityState(zipcode)
+            apiCalls.getCityState(zipcodeID)
                 .then(data => {
                     if(data.error) {
                         setError(data.error)
@@ -38,7 +37,7 @@ const DataDisplay = ({ zipcode, addToSavedZips })  => {
                         setCityState(data.city + ', ' + data.state)
                     }     
                 })
-        }
+        }   
     }, [])
 
     useLayoutEffect(() => {
@@ -49,14 +48,10 @@ const DataDisplay = ({ zipcode, addToSavedZips })  => {
                 return b - a
             })
             setUvHigh(high[0])
-    
-                const month = uvData[0]['DATE_TIME'].split(' ')[0].split('/')[0]
-                const day = uvData[0]['DATE_TIME'].split(' ')[0].split('/')[1]
-                setDate(month + ' ' + day)
-
+            const month = uvData[0]['DATE_TIME'].split(' ')[0].split('/')[0]
+            const day = uvData[0]['DATE_TIME'].split(' ')[0].split('/')[1]
+            setDate(month + ' ' + day)
         }
-    
-        
     })
 
     const getUvStatus = () => {
@@ -99,13 +94,12 @@ const DataDisplay = ({ zipcode, addToSavedZips })  => {
     }
 
     const saveThisZip = () => {
-        addToSavedZips(zipcode)
+        addToSavedZips(zipcodeID)
     }
 
-    
     return (
         <main>
-            { error || !zipcode ? <p className='error-message'>Sorry, there's been an error: '{error}' Please return to the home page and try again!</p> : 
+            { error || !zipcodeID ? <p className='error-message'>Sorry, there's been an error: '{error}' Please return to the home page and try again!</p> : 
             <section className='data-section' data-cy='data-section' aria-label='Section displaying data of uv levels per zipcode location'>
                 <div className='data-top'>
                     <div className='location-date'>
@@ -153,7 +147,6 @@ const DataDisplay = ({ zipcode, addToSavedZips })  => {
                         </div>
                     </div>
                 </aside>
-
             </section>
             }
         </main> 
@@ -163,6 +156,5 @@ const DataDisplay = ({ zipcode, addToSavedZips })  => {
 export default DataDisplay
 
 DataDisplay.propTypes = {
-    zipcode: propTypes.string.isRequired,
     addToSavedZips: propTypes.func.isRequired
 }

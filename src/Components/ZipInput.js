@@ -14,7 +14,7 @@ const ZipInput = ({ addZipcode, savedZipcodes }) => {
 
     const makeZipButtons = savedZipcodes.map(zip => {
         return (
-            <Link to='/datadisplay' key={zip}><button className='zipcodes' onClick={() => sendZip(zip)}>{zip}</button></Link>
+            <Link to={'/' + zip} key={zip}><button className='zipcodes' onClick={() => sendZip(zip)}>{zip}</button></Link>
         )
     })
 
@@ -27,12 +27,11 @@ const ZipInput = ({ addZipcode, savedZipcodes }) => {
                         <label className='zipcode'>
                             <input className='zipcode-input' placeholder='Zip Code' data-cy='zip-input' aria-required='true' onChange={(e) => sendZip(e.target.value)} />
                         </label>
-                        <Link to='/datadisplay' className='go-button' data-cy='go-button' aria-label='Go button to retrieve data'>Go</Link>
+                        <Link to={'/' + zip} className='go-button' data-cy='go-button' aria-label='Go button to retrieve data'>Go</Link>
                     </div>
                         <div className='saved-zips'>
                             {makeZipButtons}    
                         </div>
-
                 </div>
             </div>
             

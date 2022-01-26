@@ -27,7 +27,7 @@ const App = () => {
           <Route path='/' element={<ZipInput addZipcode={addZipcode} savedZipcodes={savedZipcodes}/>}>
           </Route>
       
-          <Route path='/datadisplay' element={<DataDisplay zipcode={zipcode} addToSavedZips={addToSavedZips}/>}>
+          <Route path='/:zipcode' element={<DataDisplay zipcode={zipcode} addToSavedZips={addToSavedZips}/>}>
           </Route>
 
           <Route path='/uvGuide' element={<UvGuide/>}>

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Bar } from 'react-chartjs-2'
 import '../Styles/HourlyUVChart.css'
 import Chart from 'chart.js/auto'
+import propTypes from 'prop-types'
 
 const HourlyUVChart = ({ uvData }) => {
     const uvValues = uvData.map(hour => {
@@ -33,27 +34,27 @@ const HourlyUVChart = ({ uvData }) => {
                 <div className='chart'>
                     <Bar
                         data={chartData}
-                        
                         options={{
                             maintainAspectRatio: true,
-                        plugins: {
-                            title: {
-                            display: true,
-                            text: "Hourly UV Index"
-                            },
-                            legend: {
-                            display: false,
-                            position: "bottom"
-                        }
-                        }
+                            plugins: {
+                                title: {
+                                display: true,
+                                text: "Hourly UV Index"
+                                },
+                                legend: {
+                                display: false,
+                                position: "bottom"
+                                }
+                            }
                         }}
                     />
-
                 </div>
             </div>
         )
-
-
 }
 
 export default HourlyUVChart
+
+HourlyUVChart.propTypes = {
+    uvData: propTypes.array.isRequired
+}

@@ -13,9 +13,6 @@ const getTodayDate = () => {
     return `${yyyy}${mm}${dd}`
 }
 
-
-
-
 const apiCalls = {
 
     getCityState: (zip) => {
@@ -37,8 +34,8 @@ const apiCalls = {
             } else {
                 return {error: "Zip Code not found!"}
             }
-        }).catch(err => err)
-                
+        }).catch(err => err)         
     }
 }
+
 export default apiCalls
