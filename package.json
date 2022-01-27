@@ -22,16 +22,10 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
-    "start:ci": "npm start & wait-on http://localhost:8080",
-    "test": "react-scripts test --env=jsdom",
+    "cy:run": "cypress run",
+    "test": "start-server-and-test start http://localhost:3000/ cy:run",
     "eject": "react-scripts eject",
-    "cy:verify": "cypress verify",
-    "cy:info": "cypress info",
-    "cy:version": "cypress version",
-    "cy:cache:list": "cypress cache list",
-    "cy:run": "npx cypress open",
-    "cy:run:record": "cypress run --record",
-    "cy:open": "cypress open"
+    "cypress:open": "cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +46,7 @@
     ]
   },
   "devDependencies": {
-    "cypress": "^9.2.1"
+    "cypress": "^9.2.1",
+    "start-server-and-test": "^1.14.0"
   }
 }
